@@ -4,349 +4,429 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BeyonDigital — Full-Service Digital Agency</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <a href="#" class="nav__logo">Beyon<span>Digital</span></a>
-      <nav class="nav__links">
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#work">Our Work</a>
-        <a href="#contact" class="btn btn--outline">Get in Touch</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Custom cursor -->
+  <div class="cursor-glow" id="cursorGlow"></div>
 
-  <!-- HERO -->
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="nav">
+    <div class="nav__logo">BeyonDigital</div>
+    <ul class="nav__links">
+      <li><a href="#services">Expertise</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#contact" class="nav__cta">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav drawer -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="#services" class="drawer__link">Expertise</a></li>
+      <li><a href="#work" class="drawer__link">Our Work</a></li>
+      <li><a href="#about" class="drawer__link">Our Story</a></li>
+      <li><a href="#contact" class="drawer__link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <span class="badge">Full-Service Digital Agency</span>
-        <h1>We Build Brands That <em>Go Beyond</em></h1>
-        <p>Marketing, design, and development — all under one roof. We partner with ambitious companies to grow their digital presence and drive real results.</p>
-        <div class="hero__cta">
-          <a href="#contact" class="btn btn--primary">Start a Project</a>
-          <a href="#work" class="btn btn--ghost">See Our Work</a>
+
+    <!-- LEFT: visual panel -->
+    <div class="hero__visual">
+      <div class="hero__image-wrap">
+        <div class="hero__image-inner">
+          <div class="hero__deco-dot"></div>
+          <!-- CSS mockup cards -->
+          <div class="hero__mockup">
+            <div class="mockup__card mockup__card--1">
+              <div class="mockup__bar"></div>
+              <div class="mockup__bar mockup__bar--short"></div>
+              <div class="mockup__avatar"></div>
+            </div>
+            <div class="mockup__card mockup__card--2">
+              <div class="mockup__img-block"></div>
+              <div class="mockup__bar mockup__bar--med"></div>
+            </div>
+            <div class="mockup__card mockup__card--3">
+              <div class="mockup__stat">
+                <span class="mockup__stat-num">200+</span>
+                <span class="mockup__stat-label">Projects Delivered</span>
+              </div>
+              <div class="mockup__sparkline">
+                <svg viewBox="0 0 80 30" preserveAspectRatio="none">
+                  <polyline points="0,25 15,18 30,22 45,8 60,14 80,3" fill="none" stroke="#064E3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero__visual">
-        <div class="hero__card hero__card--1">
-          <span class="card-icon">📈</span>
-          <strong>340%</strong>
-          <p>Avg. ROI increase</p>
+    </div>
+
+    <!-- RIGHT: content panel -->
+    <div class="hero__content">
+      <p class="hero__eyebrow">Est. 2026 · London</p>
+      <h1 class="hero__headline">
+        We Build<br />
+        <em>Brands That</em><br />
+        Go Beyond
+      </h1>
+      <p class="hero__sub">
+        Marketing, design, and development — all under one roof. We partner with ambitious companies to grow their digital presence and drive real results.
+      </p>
+      <div class="hero__actions">
+        <a href="#services" class="btn btn--primary">Explore Services</a>
+        <a href="#about" class="btn btn--ghost">Our Story ↗</a>
+      </div>
+      <div class="hero__proof">
+        <div class="proof__item">
+          <span class="proof__num">50+</span>
+          <span class="proof__label">Happy Clients</span>
         </div>
-        <div class="hero__card hero__card--2">
-          <span class="card-icon">🎨</span>
-          <strong>200+</strong>
-          <p>Projects delivered</p>
+        <div class="proof__divider"></div>
+        <div class="proof__item">
+          <span class="proof__num">340%</span>
+          <span class="proof__label">Avg. ROI Lift</span>
         </div>
-        <div class="hero__card hero__card--3">
-          <span class="card-icon">🌍</span>
-          <strong>50+</strong>
-          <p>Happy clients</p>
+        <div class="proof__divider"></div>
+        <div class="proof__item">
+          <span class="proof__num">8+</span>
+          <span class="proof__label">Years Experience</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- ═══════════════ MARQUEE ═══════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Brand Strategy</span><span class="dot">·</span>
+      <span>Web Design</span><span class="dot">·</span>
+      <span>Content Creation</span><span class="dot">·</span>
+      <span>Performance Marketing</span><span class="dot">·</span>
+      <span>SEO & Growth</span><span class="dot">·</span>
+      <span>Analytics & Reporting</span><span class="dot">·</span>
+      <span>Brand Strategy</span><span class="dot">·</span>
+      <span>Web Design</span><span class="dot">·</span>
+      <span>Content Creation</span><span class="dot">·</span>
+      <span>Performance Marketing</span><span class="dot">·</span>
+      <span>SEO & Growth</span><span class="dot">·</span>
+      <span>Analytics & Reporting</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ SERVICES ═══════════════ -->
   <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">What We Do</span>
-        <h2>Everything You Need to Grow Online</h2>
-        <p>A complete suite of digital services designed to move the needle for your business.</p>
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Expertise in</span>
+      <h2 class="section-title">Growing<br/><em>every brand with</em></h2>
+    </div>
+
+    <div class="services__grid">
+      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card__num">01</div>
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 17.5a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0z"/></svg>
+        </div>
+        <h3>Brand Strategy</h3>
+        <p>Deep audience research, positioning, and identity systems that make your brand unmissable in a crowded market.</p>
       </div>
-      <div class="services__grid">
-
-        <div class="service-card">
-          <div class="service-card__icon">🎯</div>
-          <h3>Digital Marketing</h3>
-          <p>SEO, paid ads, email campaigns, and social media strategies that attract and convert your ideal customers.</p>
-          <ul>
-            <li>Search Engine Optimization</li>
-            <li>Google & Meta Ads</li>
-            <li>Social Media Management</li>
-            <li>Email Marketing</li>
-          </ul>
+      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-card__num">02</div>
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
-
-        <div class="service-card service-card--accent">
-          <div class="service-card__icon">💻</div>
-          <h3>Web Design & Development</h3>
-          <p>Beautiful, fast, and conversion-focused websites and web applications built to perform.</p>
-          <ul>
-            <li>UX/UI Design</li>
-            <li>Website Development</li>
-            <li>E-commerce Solutions</li>
-            <li>Web App Development</li>
-          </ul>
+        <h3>Web Design & Dev</h3>
+        <p>Beautiful, fast, and conversion-focused websites and web applications built to perform and impress.</p>
+      </div>
+      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-card__num">03</div>
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-
-        <div class="service-card">
-          <div class="service-card__icon">✨</div>
-          <h3>Branding & Creative</h3>
-          <p>Compelling brand identities that tell your story, stand out from the crowd, and build lasting loyalty.</p>
-          <ul>
-            <li>Logo & Visual Identity</li>
-            <li>Brand Strategy</li>
-            <li>Content Creation</li>
-            <li>Graphic Design</li>
-          </ul>
+        <h3>Content Creation</h3>
+        <p>Art-directed visuals, motion graphics, and copy that stops the scroll, builds trust, and converts audiences.</p>
+      </div>
+      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="service-card__num">04</div>
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
-
-        <div class="service-card">
-          <div class="service-card__icon">📊</div>
-          <h3>Analytics & Strategy</h3>
-          <p>Data-driven insights and strategies that align your digital efforts with real business goals.</p>
-          <ul>
-            <li>Performance Analytics</li>
-            <li>Conversion Optimization</li>
-            <li>Market Research</li>
-            <li>Growth Consulting</li>
-          </ul>
-        </div>
-
+        <h3>Performance Marketing</h3>
+        <p>Data-obsessed ad management across Google, Meta, and LinkedIn with full-funnel attribution and clear ROI.</p>
       </div>
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section class="why-us" id="why-us">
-    <div class="container why-us__inner">
-      <div class="why-us__text">
-        <span class="badge">Why BeyonDigital</span>
-        <h2>A True Partner, Not Just a Vendor</h2>
-        <p>We don't believe in one-size-fits-all solutions. Every strategy we build is tailor-made for your business, your audience, and your goals.</p>
-        <div class="pillars">
-          <div class="pillar">
-            <div class="pillar__icon">🚀</div>
-            <div>
-              <strong>Results-First Mindset</strong>
-              <p>Every decision we make is tied back to your KPIs. No vanity metrics — just growth that matters.</p>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar__icon">🤝</div>
-            <div>
-              <strong>Dedicated Team</strong>
-              <p>You get a dedicated account team — strategist, designer, developer — who knows your brand inside out.</p>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar__icon">🔍</div>
-            <div>
-              <strong>Full Transparency</strong>
-              <p>Clear reporting, honest communication, and no black-box strategies. You always know what we're doing and why.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="why-us__stats">
-        <div class="stat-box">
-          <strong>98%</strong>
-          <p>Client satisfaction rate</p>
-        </div>
-        <div class="stat-box">
-          <strong>5★</strong>
-          <p>Average review score</p>
-        </div>
-        <div class="stat-box">
-          <strong>8+</strong>
-          <p>Years of experience</p>
-        </div>
-        <div class="stat-box">
-          <strong>3x</strong>
-          <p>Faster time-to-launch</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK / CASE STUDIES -->
+  <!-- ═══════════════ FEATURED WORK ═══════════════ -->
   <section class="work" id="work">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">Our Work</span>
-        <h2>Results We're Proud Of</h2>
-        <p>A snapshot of the impact we've created for our clients across industries.</p>
-      </div>
-      <div class="work__grid">
-
-        <div class="case-card">
-          <div class="case-card__img case-card__img--1"></div>
-          <div class="case-card__body">
-            <span class="case-tag">E-commerce · SEO</span>
-            <h3>RetailBrand Co.</h3>
-            <p>Grew organic traffic by <strong>420%</strong> and doubled revenue in 9 months through targeted SEO and content strategy.</p>
-          </div>
-        </div>
-
-        <div class="case-card">
-          <div class="case-card__img case-card__img--2"></div>
-          <div class="case-card__body">
-            <span class="case-tag">SaaS · Web Design</span>
-            <h3>TechFlow SaaS</h3>
-            <p>Redesigned the product landing page, increasing trial sign-ups by <strong>65%</strong> within 30 days of launch.</p>
-          </div>
-        </div>
-
-        <div class="case-card">
-          <div class="case-card__img case-card__img--3"></div>
-          <div class="case-card__body">
-            <span class="case-tag">Restaurant · Branding</span>
-            <h3>Harvest Kitchen</h3>
-            <p>Full rebrand — logo, menus, website, and social presence — resulting in a <strong>3x increase</strong> in foot traffic.</p>
-          </div>
-        </div>
-
-      </div>
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Work we've done</span>
+      <h2 class="section-title">Results that<br/><em>speak for themselves.</em></h2>
     </div>
-  </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">Testimonials</span>
-        <h2>What Our Clients Say</h2>
+    <div class="work__grid">
+      <div class="work-card" data-aos="fade-right" data-aos-delay="0">
+        <div class="work-card__image work-card__image--a">
+          <div class="work-card__overlay"></div>
+        </div>
+        <div class="work-card__body">
+          <h3>RetailBrand Co.</h3>
+          <p>Grew organic traffic by 420% and doubled revenue in 9 months through targeted SEO and content strategy.</p>
+          <span class="work-card__tag">E-commerce · SEO · Content</span>
+        </div>
       </div>
-      <div class="testimonials__grid">
-
-        <div class="testimonial">
-          <p>"BeyonDigital transformed our online presence. Within six months, our leads tripled and our website finally reflects the quality of our brand."</p>
-          <div class="testimonial__author">
-            <div class="avatar">AK</div>
-            <div>
-              <strong>Alex Kim</strong>
-              <span>CEO, RetailBrand Co.</span>
-            </div>
-          </div>
+      <div class="work-card work-card--tall" data-aos="fade-up" data-aos-delay="100">
+        <div class="work-card__image work-card__image--b">
+          <div class="work-card__overlay"></div>
         </div>
-
-        <div class="testimonial">
-          <p>"The team genuinely cared about our success. They brought ideas we hadn't thought of and executed everything flawlessly and on time."</p>
-          <div class="testimonial__author">
-            <div class="avatar">SR</div>
-            <div>
-              <strong>Sara Reynolds</strong>
-              <span>Founder, TechFlow SaaS</span>
-            </div>
-          </div>
+        <div class="work-card__body">
+          <h3>TechFlow SaaS</h3>
+          <p>Redesigned the product landing page, increasing trial sign-ups by 65% within the first 30 days of launch.</p>
+          <span class="work-card__tag">SaaS · Web Design · UX</span>
         </div>
-
-        <div class="testimonial">
-          <p>"From branding to our new website, BeyonDigital delivered beyond expectations. Our customers constantly compliment our new look."</p>
-          <div class="testimonial__author">
-            <div class="avatar">MJ</div>
-            <div>
-              <strong>Marcus Johnson</strong>
-              <span>Owner, Harvest Kitchen</span>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="process">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">How We Work</span>
-        <h2>Our Simple 4-Step Process</h2>
-        <p>From first conversation to measurable results — here's what working with us looks like.</p>
-      </div>
-      <div class="process__steps">
-        <div class="step">
-          <div class="step__number">01</div>
-          <h3>Discover</h3>
-          <p>We learn about your business, goals, audience, and competition to build a solid foundation.</p>
+      <div class="work-card" data-aos="fade-left" data-aos-delay="200">
+        <div class="work-card__image work-card__image--c">
+          <div class="work-card__overlay"></div>
         </div>
-        <div class="step__arrow">→</div>
-        <div class="step">
-          <div class="step__number">02</div>
-          <h3>Strategize</h3>
-          <p>We craft a tailored roadmap — channels, timelines, and measurable milestones.</p>
-        </div>
-        <div class="step__arrow">→</div>
-        <div class="step">
-          <div class="step__number">03</div>
-          <h3>Execute</h3>
-          <p>Our team builds, launches, and manages every element with precision and care.</p>
-        </div>
-        <div class="step__arrow">→</div>
-        <div class="step">
-          <div class="step__number">04</div>
-          <h3>Optimize</h3>
-          <p>We continuously analyze results and iterate to maximize your return on investment.</p>
+        <div class="work-card__body">
+          <h3>Harvest Kitchen</h3>
+          <p>Full rebrand — logo, menus, website, and social — resulting in a 3x increase in foot traffic and bookings.</p>
+          <span class="work-card__tag">Restaurant · Branding · Social</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA / CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container contact__inner">
-      <div class="contact__text">
-        <span class="badge badge--light">Let's Talk</span>
-        <h2>Ready to Grow Your Business?</h2>
-        <p>Tell us about your project and we'll get back to you within 24 hours with a free consultation.</p>
-        <ul class="contact__info">
-          <li>📧 hello@beyondigital.com</li>
-          <li>📞 +1 (555) 123-4567</li>
-          <li>📍 New York, NY — Serving clients worldwide</li>
-        </ul>
+  <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+  <section class="work" id="about">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">A word</span>
+      <h2 class="section-title">From our<br/><em>Beloved Clients</em></h2>
+    </div>
+
+    <section class="testimonial" data-aos="fade-up">
+      <div class="testimonial__grid">
+
+        <div class="testimonial__card">
+          <div class="testimonial__quote-mark">"</div>
+          <blockquote>"BeyonDigital transformed our online presence. Within six months, our leads tripled and our website finally reflects the quality of our brand. They're not a vendor — they're a true partner."</blockquote>
+          <cite>
+            <span class="cite__name">Alex Kim</span>
+            <span class="cite__role">CEO, RetailBrand Co.</span>
+          </cite>
+        </div>
+
+        <div class="testimonial__card">
+          <div class="testimonial__quote-mark">"</div>
+          <blockquote>"The team genuinely cared about our success. They brought ideas we hadn't thought of and executed flawlessly. Our trial sign-ups jumped 65% in the first month after launch."</blockquote>
+          <cite>
+            <span class="cite__name">Sara Reynolds</span>
+            <span class="cite__role">Founder, TechFlow SaaS</span>
+          </cite>
+        </div>
+
+        <div class="testimonial__card">
+          <div class="testimonial__quote-mark">"</div>
+          <blockquote>"From branding to our new website, BeyonDigital delivered beyond expectations. Our customers constantly compliment our new look and our bookings have never been higher."</blockquote>
+          <cite>
+            <span class="cite__name">Marcus Johnson</span>
+            <span class="cite__role">Owner, Harvest Kitchen</span>
+          </cite>
+        </div>
+
       </div>
-      <form class="contact__form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Jane Smith" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="jane@company.com" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="service">Service You're Interested In</label>
-          <select id="service">
-            <option value="">Select a service...</option>
-            <option>Digital Marketing</option>
-            <option>Web Design & Development</option>
-            <option>Branding & Creative</option>
-            <option>Analytics & Strategy</option>
-            <option>Full-Service Package</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Tell Us About Your Project</label>
-          <textarea id="message" rows="4" placeholder="What are you looking to achieve?"></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">Send Message →</button>
-      </form>
+    </section>
+  </section>
+
+  <!-- ═══════════════ CTA BAND ═══════════════ -->
+  <section class="cta-band" id="contact" data-aos="fade-up">
+    <div class="cta-band__inner">
+      <h2>
+        <span class="cta-light">Ready to go beyond digital?</span><br>
+        <em>The algorithm waits for no one.</em>
+      </h2>
+      <a href="mailto:hello@beyondigital.co.uk" class="btn btn--primary btn--large">Start your growth phase</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <a href="#" class="nav__logo">Beyon<span>Digital</span></a>
-      <p>© 2025 BeyonDigital. All rights reserved.</p>
-      <div class="footer__links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#contact">Contact</a>
+    <div class="footer__top">
+      <div class="footer__brand" data-aos="fade-right">
+        <div class="footer__logo">BeyonDigital</div>
+        <p>Redefining what digital can do for the modern enterprise — marketing, design, and development under one roof.</p>
       </div>
+      <div class="footer__links" data-aos="fade-left">
+        <div class="footer__col">
+          <h4>Agency</h4>
+          <a href="#">About</a>
+          <a href="#">Work</a>
+          <a href="#">Careers</a>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="#">Strategy</a>
+          <a href="#">Web Design</a>
+          <a href="#">Paid Media</a>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <a href="https://www.instagram.com/beyondigital.co/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter/X</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>London · India · Dubai</span>
+      <span>© 2025 BeyonDigital. All rights reserved.</span>
     </div>
   </footer>
 
+  <!-- AOS + custom JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, easing: 'ease-out-cubic', once: true, offset: 80 });
+
+    // Cursor glow
+    const glow = document.getElementById('cursorGlow');
+    let mx = -200, my = -200, cx = -200, cy = -200;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function animateCursor() {
+      cx += (mx - cx) * 0.12;
+      cy += (my - cy) * 0.12;
+      glow.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      drawer.classList.toggle('open');
+    });
+    document.querySelectorAll('.drawer__link').forEach(l => l.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      drawer.classList.remove('open');
+    }));
+
+    // Nav scroll style
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+
+    // Scroll Progress Bar
+    const progressBar = document.createElement('div');
+    progressBar.id = 'scroll-progress';
+    document.body.appendChild(progressBar);
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = ((window.scrollY / total) * 100) + '%';
+    });
+
+    // Staggered word reveal on section titles
+    const sectionTitles = document.querySelectorAll('.section-title');
+    const wordObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          if (el.dataset.split) return;
+          el.dataset.split = true;
+          el.innerHTML = el.innerHTML.replace(/(<[^>]+>)|([^<]+)/g, (match, tag, text) => {
+            if (tag) return tag;
+            return text.split(' ').map((w, i) =>
+              `<span class="word-reveal" style="--d:${i * 60}ms">${w}&nbsp;</span>`
+            ).join('');
+          });
+          wordObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.3 });
+    sectionTitles.forEach(t => wordObserver.observe(t));
+
+    // Marquee speed on scroll
+    let lastScrollY = window.scrollY;
+    let marqueeSpeed = 28;
+    const track = document.querySelector('.marquee-track');
+    window.addEventListener('scroll', () => {
+      const delta = Math.abs(window.scrollY - lastScrollY);
+      marqueeSpeed = Math.max(8, 28 - delta * 0.4);
+      track.style.animationDuration = marqueeSpeed + 's';
+      lastScrollY = window.scrollY;
+    });
+
+    // Counter animation on proof numbers
+    const proofNums = document.querySelectorAll('.proof__num');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting || entry.target.dataset.counted) return;
+        entry.target.dataset.counted = true;
+        const target = entry.target.textContent;
+        const num = parseFloat(target.replace(/[^0-9.]/g, ''));
+        const suffix = target.replace(/[0-9.]/g, '');
+        let start = 0;
+        const duration = 1400;
+        const step = (timestamp) => {
+          if (!start) start = timestamp;
+          const progress = Math.min((timestamp - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = (num * eased).toFixed(num % 1 !== 0 ? 1 : 0);
+          entry.target.textContent = current + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.8 });
+    proofNums.forEach(n => counterObserver.observe(n));
+
+    // Magnetic hover on CTA buttons
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.18}px, ${y * 0.28}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+
+    // Service card line wipe
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mouseenter', () => card.classList.add('card-active'));
+      card.addEventListener('mouseleave', () => card.classList.remove('card-active'));
+    });
+
+    // Testimonial clip-path reveal
+    const testimonial = document.querySelector('.testimonial');
+    const clipObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('clip-revealed');
+          clipObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
+    if (testimonial) clipObserver.observe(testimonial);
+  </script>
 </body>
 </html>
