@@ -398,33 +398,7 @@ img { display: block; max-width: 100%; }
   margin-bottom: 3.5rem;
 }
 
-/* Social proof row */
-.hero__proof {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  padding-top: 2.2rem;
-  border-top: 1px solid rgba(18,18,18,0.09);
-}
-.proof__item { display: flex; flex-direction: column; gap: 3px; }
-.proof__num {
-  font-family: var(--font-head);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--charcoal);
-  transition: color 0.3s;
-}
-.proof__label {
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--grey);
-  font-family: var(--font-cta);
-}
-.proof__divider {
-  width: 1px; height: 32px;
-  background: rgba(18,18,18,0.12);
-}
+
 
 /* ══════════════════════════════════════════
    MARQUEE
