@@ -5,318 +5,477 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BeyonDigital — Full-Service Digital Agency</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Custom cursor -->
-  <div class="cursor-glow" id="cursorGlow"></div>
-
   <!-- ═══════════════ NAV ═══════════════ -->
   <nav class="nav">
     <div class="nav__logo">BeyonDigital</div>
     <ul class="nav__links">
-      <li><a href="#services">Expertise</a></li>
-      <li><a href="#work">Our Work</a></li>
-      <li><a href="#about">Our Story</a></li>
-      <li><a href="#contact" class="nav__cta">Contact</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
     </ul>
+    <a href="#contact" class="nav__cta">Contact</a>
     <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- Mobile nav drawer -->
+  <!-- Mobile drawer -->
   <div class="nav__drawer" id="drawer">
     <ul>
-      <li><a href="#services" class="drawer__link">Expertise</a></li>
-      <li><a href="#work" class="drawer__link">Our Work</a></li>
-      <li><a href="#about" class="drawer__link">Our Story</a></li>
+      <li><a href="#work" class="drawer__link">Work</a></li>
+      <li><a href="#services" class="drawer__link">Services</a></li>
+      <li><a href="#about" class="drawer__link">About</a></li>
       <li><a href="#contact" class="drawer__link">Contact</a></li>
     </ul>
   </div>
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero">
+    <div class="hero__bg-text">AGENCY</div>
 
-    <!-- LEFT: visual panel -->
+    <!-- Floating service tags -->
+    <div class="hero__tag hero__tag--1">Web Design</div>
+    <div class="hero__tag hero__tag--2">App Design</div>
+    <div class="hero__tag hero__tag--3">Branding</div>
+    <div class="hero__tag hero__tag--4">Content Creation</div>
+    <div class="hero__tag hero__tag--5">Performance Marketing</div>
+    <div class="hero__tag hero__tag--6">SEO & Growth</div>
+
+    <!-- Central visual -->
     <div class="hero__visual">
-      <div class="hero__image-wrap">
-        <div class="hero__image-inner">
-          <div class="hero__deco-dot"></div>
-          <!-- CSS mockup cards -->
-          <div class="hero__mockup">
-            <div class="mockup__card mockup__card--1">
-              <div class="mockup__bar"></div>
-              <div class="mockup__bar mockup__bar--short"></div>
-              <div class="mockup__avatar"></div>
-            </div>
-            <div class="mockup__card mockup__card--2">
-              <div class="mockup__img-block"></div>
-              <div class="mockup__bar mockup__bar--med"></div>
-            </div>
-            <div class="mockup__card mockup__card--3">
-              <div class="mockup__stat">
-                <span class="mockup__stat-num">200+</span>
-                <span class="mockup__stat-label">Projects Delivered</span>
-              </div>
-              <div class="mockup__sparkline">
-                <svg viewBox="0 0 80 30" preserveAspectRatio="none">
-                  <polyline points="0,25 15,18 30,22 45,8 60,14 80,3" fill="none" stroke="#064E3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="hero__shape">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#064E3B"/>
+              <stop offset="100%" stop-color="#b8860b"/>
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#heroGrad)" opacity="0.15"/>
+          <circle cx="100" cy="100" r="60" fill="url(#heroGrad)" opacity="0.25"/>
+          <circle cx="100" cy="100" r="30" fill="url(#heroGrad)" opacity="0.4"/>
+        </svg>
       </div>
     </div>
 
-    <!-- RIGHT: content panel -->
-    <div class="hero__content">
-      <p class="hero__eyebrow">Est. 2026 · London</p>
-      <h1 class="hero__headline">
-        We Build<br />
-        <em>Brands That</em><br />
-        Go Beyond
-      </h1>
-      <p class="hero__sub">
-        Marketing, design, and development — all under one roof. We partner with ambitious companies to grow their digital presence and drive real results.
-      </p>
-      <div class="hero__actions">
-        <a href="#services" class="btn btn--primary">Explore Services</a>
-        <a href="#about" class="btn btn--ghost">Our Story ↗</a>
+    <!-- Bottom labels -->
+    <div class="hero__label hero__label--hello">Full-Service Digital Agency</div>
+    <div class="hero__label hero__label--cta">Let's build together!</div>
+
+    <h1 class="hero__name">BeyonDigital</h1>
+  </section>
+
+  <!-- ═══════════════ ABOUT SPLIT ═══════════════ -->
+  <section class="about-split" id="about">
+    <div class="about-split__left">
+      <div class="about-split__visual">
+        <div class="about-visual__shape"></div>
+        <div class="about-visual__circle"></div>
       </div>
-      <div class="hero__proof">
-        <div class="proof__item">
-          <span class="proof__num">50+</span>
-          <span class="proof__label">Happy Clients</span>
-        </div>
-        <div class="proof__divider"></div>
-        <div class="proof__item">
-          <span class="proof__num">340%</span>
-          <span class="proof__label">Avg. ROI Lift</span>
-        </div>
-        <div class="proof__divider"></div>
-        <div class="proof__item">
-          <span class="proof__num">8+</span>
-          <span class="proof__label">Years Experience</span>
-        </div>
+    </div>
+    <div class="about-split__right">
+      <span class="label-tag">About us</span>
+      <h2 class="about-split__title">We are<br/>BeyonDigital!</h2>
+      <p class="about-split__role">Full-Service Digital Agency & Creative Studio</p>
+      <p class="about-split__desc">We craft digital experiences that balance usability, clarity, and visual emotion through thoughtful systems, calm aesthetics, and intentional creative direction — helping ambitious brands go beyond.</p>
+      <div class="about-split__social">
+        <a href="https://www.instagram.com/beyondigital.co/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l11.7 16h4.3L8.3 4H4zm0 16L20 4"/></svg>
+        </a>
+      </div>
+      <div class="about-split__actions">
+        <a href="#contact" class="btn btn--primary">Let's Talk</a>
+        <span class="status-dot"><span class="dot-pulse"></span> Open for projects</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ MARQUEE ═══════════════ -->
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <span>Brand Strategy</span><span class="dot">·</span>
-      <span>Web Design</span><span class="dot">·</span>
-      <span>Content Creation</span><span class="dot">·</span>
-      <span>Performance Marketing</span><span class="dot">·</span>
-      <span>SEO & Growth</span><span class="dot">·</span>
-      <span>Analytics & Reporting</span><span class="dot">·</span>
-      <span>Brand Strategy</span><span class="dot">·</span>
-      <span>Web Design</span><span class="dot">·</span>
-      <span>Content Creation</span><span class="dot">·</span>
-      <span>Performance Marketing</span><span class="dot">·</span>
-      <span>SEO & Growth</span><span class="dot">·</span>
-      <span>Analytics & Reporting</span><span class="dot">·</span>
+  <!-- ═══════════════ RIPPLE SECTION ═══════════════ -->
+  <section class="ripple-section">
+    <div class="ripple-section__inner">
+      <span class="status-dot status-dot--light"><span class="dot-pulse"></span> Open for projects</span>
+      <h2 class="ripple-section__title">Built for a lasting <em>ripple.</em></h2>
+      <p class="ripple-section__sub">Beyond visuals. Truly memorable.</p>
+      <a href="#contact" class="btn btn--light">Let's Build Together</a>
+      <div class="ripple-section__art">
+        <div class="ripple-ring ripple-ring--1"></div>
+        <div class="ripple-ring ripple-ring--2"></div>
+        <div class="ripple-ring ripple-ring--3"></div>
+        <div class="ripple-drop"></div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ═══════════════ JOURNEY / TIMELINE ═══════════════ -->
+  <section class="journey" id="journey">
+    <div class="journey__header">
+      <span class="label-tag">Our story</span>
+      <h2 class="journey__title">A <em>journey</em> through<br/>thoughtful design.</h2>
+      <p class="journey__desc">Over the years, we've refined our process through teamwork and experimentation to create meaningful experiences.</p>
+    </div>
+    <div class="journey__timeline">
+      <div class="timeline-item">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__date">2018 — 2020</div>
+        <h3 class="timeline-item__title">Digital Marketing Roots</h3>
+        <p class="timeline-item__desc">Started with performance marketing and SEO, building data-driven strategies for startups and SMBs across the UK and India.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__date">2020 — 2023</div>
+        <h3 class="timeline-item__title">Expanding into Design & Dev</h3>
+        <p class="timeline-item__desc">Added web design, branding, and development to our capabilities — creating end-to-end digital experiences for growing brands.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__date">2023 — Present</div>
+        <h3 class="timeline-item__title">BeyonDigital — Full-Service Agency</h3>
+        <p class="timeline-item__desc">Now a full-service digital agency serving clients from London, India, and Dubai — marketing, design, and development under one roof.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CASE STUDIES ═══════════════ -->
+  <section class="case-studies" id="work">
+    <div class="case-study">
+      <span class="label-tag">Case study</span>
+      <h2 class="case-study__title">Powering <em>activation</em><br/>from first click.</h2>
+      <p class="case-study__desc">RetailBrand's onboarding was confusing. We improved it with a clearer hierarchy, simpler navigation, and a cleaner dashboard for faster activation and better experience.</p>
+      <div class="case-study__stats">
+        <div class="stat-box">
+          <span class="stat-box__num">5.6M</span>
+          <span class="stat-box__label">Revenue Impact</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box__num">97%</span>
+          <span class="stat-box__label">Client Satisfaction</span>
+        </div>
+      </div>
+      <div class="case-study__testimonial">
+        <div class="quote-mark">"</div>
+        <blockquote>The redesign greatly improved usability and engagement. The process was structured, collaborative, and detail-oriented.</blockquote>
+        <cite>
+          <span class="cite__name">Sophia Bennett</span>
+          <span class="cite__role">Product Designer at Flowspace</span>
+        </cite>
+      </div>
+    </div>
+
+    <div class="case-study">
+      <span class="label-tag">Case study</span>
+      <h2 class="case-study__title">Fashion <em>reimagined</em><br/>through story.</h2>
+      <p class="case-study__desc">Élan Studio's site had great products but lacked emotional impact and clear navigation. We improved hierarchy, layouts, and typography to elevate the brand's premium feel.</p>
+      <div class="case-study__stats">
+        <div class="stat-box">
+          <span class="stat-box__num">4.9M</span>
+          <span class="stat-box__label">Revenue Impact</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box__num">98%</span>
+          <span class="stat-box__label">Client Satisfaction</span>
+        </div>
+      </div>
+      <div class="case-study__testimonial">
+        <div class="quote-mark">"</div>
+        <blockquote>The final result felt elevated, intentional, and aligned perfectly with our brand direction. Every detail was beautifully executed.</blockquote>
+        <cite>
+          <span class="cite__name">Olivia Carter</span>
+          <span class="cite__role">Brand Strategist at Élan Studio</span>
+        </cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CLIENTS ═══════════════ -->
+  <section class="clients">
+    <span class="label-tag label-tag--center">Trusted worldwide</span>
+    <h2 class="clients__title">250+ clients.<br/>Countless wins.</h2>
+    <p class="clients__sub">Empowering founders and teams globally to turn bold ideas into brands people remember and markets reward.</p>
+    <div class="clients__avatars">
+      <div class="avatar-ring">
+        <span class="avatar-dot" style="--i:0"></span>
+        <span class="avatar-dot" style="--i:1"></span>
+        <span class="avatar-dot" style="--i:2"></span>
+        <span class="avatar-dot" style="--i:3"></span>
+        <span class="avatar-dot" style="--i:4"></span>
+        <span class="avatar-dot" style="--i:5"></span>
+        <span class="avatar-dot" style="--i:6"></span>
+        <span class="avatar-dot" style="--i:7"></span>
+        <span class="avatar-dot" style="--i:8"></span>
+        <span class="avatar-dot" style="--i:9"></span>
+        <span class="avatar-dot" style="--i:10"></span>
+        <span class="avatar-dot" style="--i:11"></span>
+        <span class="avatar-dot" style="--i:12"></span>
+        <span class="avatar-dot" style="--i:13"></span>
+        <span class="avatar-dot" style="--i:14"></span>
+        <span class="avatar-dot" style="--i:15"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROCESS ═══════════════ -->
+  <section class="process">
+    <div class="process__header">
+      <span class="label-tag">How it works</span>
+      <h2 class="process__title">See how we get<br/>things <em>done.</em></h2>
+      <p class="process__sub">A structured approach to delivering clear and effective design solutions every time.</p>
+    </div>
+    <div class="process__grid">
+      <div class="process__steps">
+        <div class="process-step">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div>
+            <h3>Discover</h3>
+            <p>Understanding goals, users, and challenges.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div>
+            <h3>Define</h3>
+            <p>Structuring flows and defining direction.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div>
+            <h3>Design</h3>
+            <p>Creating intuitive and refined interfaces.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </div>
+          <div>
+            <h3>Refine</h3>
+            <p>Iterating through feedback and testing.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <h3>Deliver</h3>
+            <p>Providing polished, ready-to-use assets.</p>
+          </div>
+        </div>
+      </div>
+      <div class="process__quote">
+        <div class="quote-mark">"</div>
+        <blockquote>Great design is rarely accidental. It comes from clarity, structure, and thoughtful iteration.</blockquote>
+        <cite>— BeyonDigital Team</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURED PROJECTS ═══════════════ -->
+  <section class="projects">
+    <span class="label-tag label-tag--center">Portfolio</span>
+    <h2 class="projects__title"><em>Featured</em> projects<br/>you'll love.</h2>
+    <p class="projects__sub">A selection of projects focused on clarity, usability, and meaningful, lasting positive impact worldwide.</p>
+    <div class="projects__grid">
+      <div class="project-card">
+        <div class="project-card__image project-card__image--1">
+          <span class="project-card__tag">Branding</span>
+        </div>
+        <h3>Élan Collective</h3>
+        <p>Minimal identity for a luxury fashion brand.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-card__image project-card__image--2">
+          <span class="project-card__tag">Web Design</span>
+        </div>
+        <h3>Bloom Platform</h3>
+        <p>Custom interface crafted for modern digital products.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-card__image project-card__image--3">
+          <span class="project-card__tag">Performance Marketing</span>
+        </div>
+        <h3>TechFlow SaaS</h3>
+        <p>Data-driven campaigns that tripled conversion rates.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-card__image project-card__image--4">
+          <span class="project-card__tag">App Design</span>
+        </div>
+        <h3>Harvest Kitchen</h3>
+        <p>Full rebrand and digital presence transformation.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══════════════ SERVICES ═══════════════ -->
   <section class="services" id="services">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">Expertise in</span>
-      <h2 class="section-title">Growing<br/><em>every brand with</em></h2>
+    <div class="services__header">
+      <span class="label-tag">Services</span>
+      <h2 class="services__title">How we bring<br/>ideas to <em>life.</em></h2>
+      <p class="services__sub">Focused solutions to design better products and meaningful user experiences daily.</p>
     </div>
-
     <div class="services__grid">
-      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="service-card__num">01</div>
-        <div class="service-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 17.5a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0z"/></svg>
-        </div>
-        <h3>Brand Strategy</h3>
-        <p>Deep audience research, positioning, and identity systems that make your brand unmissable in a crowded market.</p>
-      </div>
-      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="80">
-        <div class="service-card__num">02</div>
+      <div class="service-card">
         <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
-        <h3>Web Design & Dev</h3>
-        <p>Beautiful, fast, and conversion-focused websites and web applications built to perform and impress.</p>
+        <h3>Web Design</h3>
+        <p>Designing modern, responsive websites with clear visuals and UX.</p>
       </div>
-      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="160">
-        <div class="service-card__num">03</div>
+      <div class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <h3>App Design</h3>
+        <p>Creating intuitive mobile and web interfaces that are easy to use.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 17.5a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0z"/></svg>
+        </div>
+        <h3>Branding</h3>
+        <p>Building visual identities that clearly and consistently represent brand.</p>
+      </div>
+      <div class="service-card">
         <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
         <h3>Content Creation</h3>
-        <p>Art-directed visuals, motion graphics, and copy that stops the scroll, builds trust, and converts audiences.</p>
+        <p>Creating custom visuals that add personality and boost storytelling.</p>
       </div>
-      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="240">
-        <div class="service-card__num">04</div>
+      <div class="service-card">
         <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
         <h3>Performance Marketing</h3>
-        <p>Data-obsessed ad management across Google, Meta, and LinkedIn with full-funnel attribution and clear ROI.</p>
+        <p>Data-driven ad management with full-funnel attribution and ROI.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>SEO & Growth</h3>
+        <p>Crafting unique growth strategies that clearly express your brand.</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ FEATURED WORK ═══════════════ -->
-  <section class="work" id="work">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">Work we've done</span>
-      <h2 class="section-title">Results that<br/><em>speak for themselves.</em></h2>
+  <!-- ═══════════════ WHAT SETS US APART ═══════════════ -->
+  <section class="apart">
+    <div class="apart__header">
+      <span class="label-tag">Why choose us</span>
+      <h2 class="apart__title">What sets us <em>apart.</em></h2>
+      <p class="apart__sub">A system-driven workflow to reduce delays, improve consistency, and help teams execute ideas efficiently.</p>
     </div>
-
-    <div class="work__grid">
-      <div class="work-card" data-aos="fade-right" data-aos-delay="0">
-        <div class="work-card__image work-card__image--a">
-          <div class="work-card__overlay"></div>
-        </div>
-        <div class="work-card__body">
-          <h3>RetailBrand Co.</h3>
-          <p>Grew organic traffic by 420% and doubled revenue in 9 months through targeted SEO and content strategy.</p>
-          <span class="work-card__tag">E-commerce · SEO · Content</span>
-        </div>
+    <div class="apart__metrics">
+      <div class="metric-row">
+        <span class="metric-row__label">Faster delivery</span>
+        <span class="metric-row__bar"><span class="metric-row__fill" style="--w:87%"></span></span>
+        <span class="metric-row__value">+87%</span>
+        <span class="metric-row__cat">/Time</span>
       </div>
-      <div class="work-card work-card--tall" data-aos="fade-up" data-aos-delay="100">
-        <div class="work-card__image work-card__image--b">
-          <div class="work-card__overlay"></div>
-        </div>
-        <div class="work-card__body">
-          <h3>TechFlow SaaS</h3>
-          <p>Redesigned the product landing page, increasing trial sign-ups by 65% within the first 30 days of launch.</p>
-          <span class="work-card__tag">SaaS · Web Design · UX</span>
-        </div>
+      <div class="metric-row">
+        <span class="metric-row__label">More automated</span>
+        <span class="metric-row__bar"><span class="metric-row__fill" style="--w:62%"></span></span>
+        <span class="metric-row__value">+62%</span>
+        <span class="metric-row__cat">/Automation</span>
       </div>
-      <div class="work-card" data-aos="fade-left" data-aos-delay="200">
-        <div class="work-card__image work-card__image--c">
-          <div class="work-card__overlay"></div>
-        </div>
-        <div class="work-card__body">
-          <h3>Harvest Kitchen</h3>
-          <p>Full rebrand — logo, menus, website, and social — resulting in a 3x increase in foot traffic and bookings.</p>
-          <span class="work-card__tag">Restaurant · Branding · Social</span>
-        </div>
+      <div class="metric-row">
+        <span class="metric-row__label">Reduced revision cycles</span>
+        <span class="metric-row__bar"><span class="metric-row__fill" style="--w:76%"></span></span>
+        <span class="metric-row__value">+76%</span>
+        <span class="metric-row__cat">/Efficiency</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-row__label">Consistent on all screen</span>
+        <span class="metric-row__bar"><span class="metric-row__fill" style="--w:70%"></span></span>
+        <span class="metric-row__value">+70%</span>
+        <span class="metric-row__cat">/Consistency</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-row__label">Designed for growth</span>
+        <span class="metric-row__bar"><span class="metric-row__fill" style="--w:59%"></span></span>
+        <span class="metric-row__value">+59%</span>
+        <span class="metric-row__cat">/Scalability</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
-  <section class="work" id="about">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">A word</span>
-      <h2 class="section-title">From our<br/><em>Beloved Clients</em></h2>
-    </div>
-
-    <section class="testimonial" data-aos="fade-up">
-      <div class="testimonial__grid">
-
-        <div class="testimonial__card">
-          <div class="testimonial__quote-mark">"</div>
-          <blockquote>"BeyonDigital transformed our online presence. Within six months, our leads tripled and our website finally reflects the quality of our brand. They're not a vendor — they're a true partner."</blockquote>
-          <cite>
-            <span class="cite__name">Alex Kim</span>
-            <span class="cite__role">CEO, RetailBrand Co.</span>
-          </cite>
-        </div>
-
-        <div class="testimonial__card">
-          <div class="testimonial__quote-mark">"</div>
-          <blockquote>"The team genuinely cared about our success. They brought ideas we hadn't thought of and executed flawlessly. Our trial sign-ups jumped 65% in the first month after launch."</blockquote>
-          <cite>
-            <span class="cite__name">Sara Reynolds</span>
-            <span class="cite__role">Founder, TechFlow SaaS</span>
-          </cite>
-        </div>
-
-        <div class="testimonial__card">
-          <div class="testimonial__quote-mark">"</div>
-          <blockquote>"From branding to our new website, BeyonDigital delivered beyond expectations. Our customers constantly compliment our new look and our bookings have never been higher."</blockquote>
-          <cite>
-            <span class="cite__name">Marcus Johnson</span>
-            <span class="cite__role">Owner, Harvest Kitchen</span>
-          </cite>
-        </div>
-
-      </div>
-    </section>
-  </section>
-
-  <!-- ═══════════════ CTA BAND ═══════════════ -->
-  <section class="cta-band" id="contact" data-aos="fade-up">
+  <!-- ═══════════════ CTA ═══════════════ -->
+  <section class="cta-band" id="contact">
     <div class="cta-band__inner">
-      <h2>
-        <span class="cta-light">Ready to go beyond digital?</span><br>
-        <em>The algorithm waits for no one.</em>
-      </h2>
+      <h2>Ready to go<br/><em>beyond digital?</em></h2>
+      <p>The algorithm waits for no one.</p>
       <a href="mailto:hello@beyondigital.co.uk" class="btn btn--primary btn--large">Start your growth phase</a>
     </div>
   </section>
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="footer">
-    <div class="footer__top">
-      <div class="footer__brand" data-aos="fade-right">
-        <div class="footer__logo">BeyonDigital</div>
-        <p>Redefining what digital can do for the modern enterprise — marketing, design, and development under one roof.</p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h4>Navigate</h4>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
       </div>
-      <div class="footer__links" data-aos="fade-left">
-        <div class="footer__col">
-          <h4>Agency</h4>
-          <a href="#">About</a>
-          <a href="#">Work</a>
-          <a href="#">Careers</a>
-        </div>
-        <div class="footer__col">
-          <h4>Services</h4>
-          <a href="#">Strategy</a>
-          <a href="#">Web Design</a>
-          <a href="#">Paid Media</a>
-        </div>
-        <div class="footer__col">
-          <h4>Connect</h4>
-          <a href="https://www.instagram.com/beyondigital.co/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Twitter/X</a>
-        </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="#work">Portfolio</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <a href="#">Twitter/X</a>
+        <a href="https://www.instagram.com/beyondigital.co/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="footer__col">
+        <h4>Let's talk</h4>
+        <a href="mailto:hello@beyondigital.co.uk">Email</a>
+        <a href="#">Book a Call</a>
+        <a href="#">WhatsApp</a>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">GDPR Compliance</a>
       </div>
     </div>
     <div class="footer__bottom">
       <span>London · India · Dubai</span>
       <span>© 2025 BeyonDigital. All rights reserved.</span>
+      <a href="#" class="footer__back-top" aria-label="Back to top">↑</a>
     </div>
   </footer>
 
-  <!-- AOS + custom JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init({ duration: 900, easing: 'ease-out-cubic', once: true, offset: 80 });
-
-    // Cursor glow
-    const glow = document.getElementById('cursorGlow');
-    let mx = -200, my = -200, cx = -200, cy = -200;
-    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-    function animateCursor() {
-      cx += (mx - cx) * 0.12;
-      cy += (my - cy) * 0.12;
-      glow.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-      requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
+    // Nav scroll
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
 
     // Hamburger
     const hamburger = document.getElementById('hamburger');
@@ -330,103 +489,39 @@
       drawer.classList.remove('open');
     }));
 
-    // Nav scroll style
-    window.addEventListener('scroll', () => {
-      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 40);
-    });
-
-    // Scroll Progress Bar
-    const progressBar = document.createElement('div');
-    progressBar.id = 'scroll-progress';
-    document.body.appendChild(progressBar);
-    window.addEventListener('scroll', () => {
-      const total = document.documentElement.scrollHeight - window.innerHeight;
-      progressBar.style.width = ((window.scrollY / total) * 100) + '%';
-    });
-
-    // Staggered word reveal on section titles
-    const sectionTitles = document.querySelectorAll('.section-title');
-    const wordObserver = new IntersectionObserver((entries) => {
+    // Animate metric bars on scroll
+    const metricObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const el = entry.target;
-          if (el.dataset.split) return;
-          el.dataset.split = true;
-          el.innerHTML = el.innerHTML.replace(/(<[^>]+>)|([^<]+)/g, (match, tag, text) => {
-            if (tag) return tag;
-            return text.split(' ').map((w, i) =>
-              `<span class="word-reveal" style="--d:${i * 60}ms">${w}&nbsp;</span>`
-            ).join('');
+          entry.target.querySelectorAll('.metric-row__fill').forEach(bar => {
+            bar.style.width = bar.style.getPropertyValue('--w');
           });
-          wordObserver.unobserve(el);
+          metricObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.3 });
-    sectionTitles.forEach(t => wordObserver.observe(t));
+    const apartMetrics = document.querySelector('.apart__metrics');
+    if (apartMetrics) metricObserver.observe(apartMetrics);
 
-    // Marquee speed on scroll
-    let lastScrollY = window.scrollY;
-    let marqueeSpeed = 28;
-    const track = document.querySelector('.marquee-track');
-    window.addEventListener('scroll', () => {
-      const delta = Math.abs(window.scrollY - lastScrollY);
-      marqueeSpeed = Math.max(8, 28 - delta * 0.4);
-      track.style.animationDuration = marqueeSpeed + 's';
-      lastScrollY = window.scrollY;
-    });
-
-    // Counter animation on proof numbers
-    const proofNums = document.querySelectorAll('.proof__num');
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting || entry.target.dataset.counted) return;
-        entry.target.dataset.counted = true;
-        const target = entry.target.textContent;
-        const num = parseFloat(target.replace(/[^0-9.]/g, ''));
-        const suffix = target.replace(/[0-9.]/g, '');
-        let start = 0;
-        const duration = 1400;
-        const step = (timestamp) => {
-          if (!start) start = timestamp;
-          const progress = Math.min((timestamp - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const current = (num * eased).toFixed(num % 1 !== 0 ? 1 : 0);
-          entry.target.textContent = current + suffix;
-          if (progress < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-      });
-    }, { threshold: 0.8 });
-    proofNums.forEach(n => counterObserver.observe(n));
-
-    // Magnetic hover on CTA buttons
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('mousemove', e => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        btn.style.transform = `translate(${x * 0.18}px, ${y * 0.28}px)`;
-      });
-      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-    });
-
-    // Service card line wipe
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mouseenter', () => card.classList.add('card-active'));
-      card.addEventListener('mouseleave', () => card.classList.remove('card-active'));
-    });
-
-    // Testimonial clip-path reveal
-    const testimonial = document.querySelector('.testimonial');
-    const clipObserver = new IntersectionObserver((entries) => {
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.case-study, .timeline-item, .process-step, .project-card, .service-card, .about-split__right, .journey__header, .process__header, .process__quote, .apart__header, .apart__metrics');
+    const fadeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('clip-revealed');
-          clipObserver.unobserve(entry.target);
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.25 });
-    if (testimonial) clipObserver.observe(testimonial);
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => {
+      el.classList.add('fade-up');
+      fadeObserver.observe(el);
+    });
+
+    // Floating tags animation
+    document.querySelectorAll('.hero__tag').forEach((tag, i) => {
+      tag.style.animationDelay = (i * 0.15) + 's';
+    });
   </script>
 </body>
 </html>
