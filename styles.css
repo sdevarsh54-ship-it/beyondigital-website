@@ -42,6 +42,11 @@ ul { list-style: none; }
 img { display: block; max-width: 100%; }
 
 /* ── Utilities ── */
+.brand-co {
+  color: #b6608b;
+  -webkit-text-fill-color: #b6608b;
+}
+
 .label-tag {
   font-family: var(--font-cta);
   font-size: 0.7rem;
