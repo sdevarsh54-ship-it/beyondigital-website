@@ -186,7 +186,7 @@ img { display: block; max-width: 100%; }
 }
 .nav__links {
   display: flex;
-  gap: 2.2rem;
+  gap: 1rem;
   align-items: center;
 }
 .nav__links a {
