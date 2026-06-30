@@ -61,12 +61,27 @@ img { display: block; max-width: 100%; }
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  will-change: opacity, transform;
 }
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Hero load-in: starts hidden, eases in once DOM is ready.
+   .hero__tag / .hero__label keep their own floatTag/keyframe opacity timing
+   (driven by animation-delay in JS) so they're intentionally excluded here. */
+.hero__visual,
+.hero__bg-text,
+.hero__name {
+  opacity: 0;
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.hero__bg-text { transform: translate(-50%, -50%) scale(0.96); }
+.hero--loaded .hero__bg-text { opacity: 0.04; transform: translate(-50%, -50%) scale(1); }
+.hero--loaded .hero__visual { opacity: 1; }
+.hero--loaded .hero__name { opacity: 0.85; }
 
 /* ── Buttons ── */
 .btn {

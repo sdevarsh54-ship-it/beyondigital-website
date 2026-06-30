@@ -503,8 +503,15 @@
     const apartMetrics = document.querySelector('.apart__metrics');
     if (apartMetrics) metricObserver.observe(apartMetrics);
 
-    // Fade-in on scroll
-    const fadeEls = document.querySelectorAll('.case-study, .timeline-item, .process-step, .project-card, .service-card, .about-split__right, .journey__header, .process__header, .process__quote, .apart__header, .apart__metrics');
+    // Fade-in on scroll — every section now reveals smoothly
+    const fadeEls = document.querySelectorAll(
+      '.case-study, .timeline-item, .process-step, .project-card, .service-card, ' +
+      '.about-split__left, .about-split__right, .journey__header, .process__header, ' +
+      '.process__quote, .apart__header, .apart__metrics, .ripple-section__inner, ' +
+      '.clients__avatars, .clients > .label-tag, .clients__title, .clients__sub, ' +
+      '.projects__title, .projects__sub, .services__header, .case-studies, ' +
+      '.cta-band__inner, .footer__grid, .metric-row, .timeline-item__dot'
+    );
     const fadeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -513,9 +520,19 @@
         }
       });
     }, { threshold: 0.15 });
-    fadeEls.forEach(el => {
+    fadeEls.forEach((el, i) => {
       el.classList.add('fade-up');
+      // stagger items that sit inside the same grid/row for a smoother cascade
+      const siblingsInParent = el.parentElement ? Array.from(el.parentElement.children).indexOf(el) : 0;
+      el.style.transitionDelay = Math.min(siblingsInParent * 70, 350) + 'ms';
       fadeObserver.observe(el);
+    });
+
+    // Hero fades in smoothly on page load (no scroll trigger needed — it's above the fold)
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.querySelector('.hero').classList.add('hero--loaded');
+      });
     });
 
     // Floating tags animation
