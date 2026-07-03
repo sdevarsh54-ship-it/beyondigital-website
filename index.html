@@ -83,64 +83,7 @@
 
       <!-- Digital / wireframe hand (upper-left) -->
       <div class="creation__hand creation__hand--wire" id="handWire">
-        <svg viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="meshGrid" width="14" height="14" patternUnits="userSpaceOnUse">
-              <path d="M14 0L0 0 0 14" fill="none" stroke="#c0604a" stroke-width="0.55" opacity="0.6"/>
-            </pattern>
-            <clipPath id="handClip">
-              <path d="
-                M 148,410 C 100,410 60,380 50,340
-                C 38,295 30,255 28,220
-                C 26,190 34,172 52,168
-                C 62,166 72,170 80,178
-                L 82,120 C 82,106 92,96 106,96
-                C 120,96 130,106 130,120
-                L 130,80 C 130,66 140,56 154,56
-                C 168,56 178,66 178,80
-                L 178,90 C 182,78 192,70 204,70
-                C 218,70 228,80 228,94
-                L 228,108 C 232,98 240,92 250,92
-                C 262,92 270,102 270,116
-                L 270,200 C 270,230 264,260 252,284
-                C 238,312 218,330 194,340
-                L 194,410 Z
-              "/>
-            </clipPath>
-          </defs>
-          <!-- Mesh fill -->
-          <rect x="0" y="0" width="300" height="420" fill="url(#meshGrid)" clip-path="url(#handClip)"/>
-          <!-- Outline -->
-          <path d="
-            M 148,410 C 100,410 60,380 50,340
-            C 38,295 30,255 28,220
-            C 26,190 34,172 52,168
-            C 62,166 72,170 80,178
-            L 82,120 C 82,106 92,96 106,96
-            C 120,96 130,106 130,120
-            L 130,80 C 130,66 140,56 154,56
-            C 168,56 178,66 178,80
-            L 178,90 C 182,78 192,70 204,70
-            C 218,70 228,80 228,94
-            L 228,108 C 232,98 240,92 250,92
-            C 262,92 270,102 270,116
-            L 270,200 C 270,230 264,260 252,284
-            C 238,312 218,330 194,340
-            L 194,410 Z
-          " stroke="#c0604a" stroke-width="1.4" fill="none"/>
-          <!-- Knuckle lines -->
-          <line x1="82" y1="158" x2="130" y2="122" stroke="#c0604a" stroke-width="0.8" opacity="0.5"/>
-          <line x1="130" y1="122" x2="178" y2="112" stroke="#c0604a" stroke-width="0.8" opacity="0.5"/>
-          <line x1="178" y1="112" x2="228" y2="118" stroke="#c0604a" stroke-width="0.8" opacity="0.5"/>
-          <line x1="228" y1="118" x2="270" y2="130" stroke="#c0604a" stroke-width="0.8" opacity="0.5"/>
-          <!-- Finger dividers -->
-          <line x1="130" y1="80" x2="130" y2="200" stroke="#c0604a" stroke-width="0.7" opacity="0.4"/>
-          <line x1="178" y1="56" x2="178" y2="200" stroke="#c0604a" stroke-width="0.7" opacity="0.4"/>
-          <line x1="228" y1="94" x2="228" y2="200" stroke="#c0604a" stroke-width="0.7" opacity="0.4"/>
-          <!-- Fingertip glow -->
-          <circle cx="154" cy="56" r="5" fill="#c0604a" opacity="0.9"/>
-          <circle cx="154" cy="56" r="12" fill="#c0604a" opacity="0.15"/>
-        </svg>
+        <img src="hand-wire.png" alt="Digital wireframe hand" />
       </div>
 
       <!-- Spark / orb at meeting point -->
@@ -149,77 +92,9 @@
         <div class="creation__spark-ring"></div>
       </div>
 
-      <!-- Physical / real hand (lower-right, mirrored) -->
+      <!-- Physical / real hand (lower-right) -->
       <div class="creation__hand creation__hand--real" id="handReal">
-        <svg viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <clipPath id="handClipReal">
-              <path d="
-                M 148,10 C 100,10 60,40 50,80
-                C 38,125 30,165 28,200
-                C 26,230 34,248 52,252
-                C 62,254 72,250 80,242
-                L 82,300 C 82,314 92,324 106,324
-                C 120,324 130,314 130,300
-                L 130,340 C 130,354 140,364 154,364
-                C 168,364 178,354 178,340
-                L 178,330 C 182,342 192,350 204,350
-                C 218,350 228,340 228,326
-                L 228,312 C 232,322 240,328 250,328
-                C 262,328 270,318 270,304
-                L 270,220 C 270,190 264,160 252,136
-                C 238,108 218,90 194,80
-                L 194,10 Z
-              "/>
-            </clipPath>
-            <linearGradient id="skinGrad" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0%" stop-color="#c8956a"/>
-              <stop offset="50%" stop-color="#e8b48a"/>
-              <stop offset="100%" stop-color="#d4946a"/>
-            </linearGradient>
-          </defs>
-          <!-- Skin fill -->
-          <rect x="0" y="0" width="300" height="420" fill="url(#skinGrad)" clip-path="url(#handClipReal)" opacity="0.9"/>
-          <!-- Subtle shading overlay -->
-          <path d="
-            M 148,10 C 100,10 60,40 50,80
-            C 38,125 30,165 28,200
-            C 26,230 34,248 52,252
-            C 62,254 72,250 80,242
-            L 82,300 C 82,314 92,324 106,324
-            C 120,324 130,314 130,300
-            L 130,340 C 130,354 140,364 154,364
-            C 168,364 178,354 178,340
-            L 178,330 C 182,342 192,350 204,350
-            C 218,350 228,340 228,326
-            L 228,312 C 232,322 240,328 250,328
-            C 262,328 270,318 270,304
-            L 270,220 C 270,190 264,160 252,136
-            C 238,108 218,90 194,80
-            L 194,10 Z
-          " fill="rgba(80,40,20,0.12)" clip-path="url(#handClipReal)"/>
-          <!-- Outline -->
-          <path d="
-            M 148,10 C 100,10 60,40 50,80
-            C 38,125 30,165 28,200
-            C 26,230 34,248 52,252
-            C 62,254 72,250 80,242
-            L 82,300 C 82,314 92,324 106,324
-            C 120,324 130,314 130,300
-            L 130,340 C 130,354 140,364 154,364
-            C 168,364 178,354 178,340
-            L 178,330 C 182,342 192,350 204,350
-            C 218,350 228,340 228,326
-            L 228,312 C 232,322 240,328 250,328
-            C 262,328 270,318 270,304
-            L 270,220 C 270,190 264,160 252,136
-            C 238,108 218,90 194,80
-            L 194,10 Z
-          " stroke="rgba(160,90,50,0.4)" stroke-width="1.2" fill="none"/>
-          <!-- Fingertip glow -->
-          <circle cx="154" cy="10" r="5" fill="#e8b48a" opacity="0.95"/>
-          <circle cx="154" cy="10" r="14" fill="#e8b48a" opacity="0.2"/>
-        </svg>
+        <img src="hand-real.png" alt="Real human hand" />
       </div>
     </div>
 
@@ -732,8 +607,10 @@
             const offset = lerpedSpread * 180; // max px each hand travels
 
             // Wire hand moves upward; real hand moves downward
-            handWire.style.transform = `translateX(-50%) translateY(${-offset}px)`;
-            handReal.style.transform = `translateX(-50%) scaleY(-1) translateY(${-offset}px)`;
+            // Wire: anchored top-left, pulls away toward upper-left
+            handWire.style.transform = `rotate(30deg) translate(${-offset * 0.6}px, ${-offset * 0.6}px)`;
+            // Real: anchored bottom-right, pulls away toward lower-right
+            handReal.style.transform = `rotate(180deg) translate(${-offset * 0.6}px, ${-offset * 0.6}px)`;
 
             // Spark: visible when hands are close, fades as they separate
             const sparkOpacity  = Math.max(0, 1 - lerpedSpread * 2.2);

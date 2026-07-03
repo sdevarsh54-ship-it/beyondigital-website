@@ -403,26 +403,31 @@ img { display: block; max-width: 100%; }
 
 .creation__hand {
   position: absolute;
-  width: 220px;
   will-change: transform;
   pointer-events: none;
 }
 
-/* Wire hand: upper-left, finger pointing down toward center */
+/* Wire hand: upper-left corner, finger pointing toward lower-right center */
 .creation__hand--wire {
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%) rotate(0deg);
+  width: 420px;
+  top: -60px;
+  left: -60px;
+  transform: rotate(30deg);
+  transform-origin: top left;
+  mix-blend-mode: screen;
+  filter: brightness(1.1) saturate(0.8);
 }
 
-/* Real hand: lower-right, finger pointing up toward center (flip vertically) */
+/* Real hand: lower-right corner, finger pointing toward upper-left center */
 .creation__hand--real {
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%) scaleY(-1);
+  width: 380px;
+  bottom: -60px;
+  right: -60px;
+  transform: rotate(180deg);
+  transform-origin: bottom right;
 }
 
-.creation__hand svg {
+.creation__hand img {
   width: 100%;
   height: auto;
   display: block;
