@@ -321,6 +321,11 @@ img { display: block; max-width: 100%; }
   animation: floatTag 5s ease-in-out infinite;
   opacity: 0;
   animation-fill-mode: forwards;
+  transition: background 0.25s, color 0.25s, transform 0.25s;
+}
+.hero__tag:hover {
+  background: #064e3b;
+  color: var(--ivory);
 }
 
 @keyframes floatTag {
