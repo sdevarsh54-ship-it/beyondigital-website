@@ -33,9 +33,83 @@
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero">
     <p class="eyebrow">Tagline goes here</p>
-    <h1 class="hero__title">Your Headline Goes <em>Here</em></h1>
+    <h1 class="hero__title">Your Headline<br />Goes <em>Here</em></h1>
     <p class="hero__subtitle">A short supporting sentence about what BeyonDigital does and who it's for.</p>
-    <a href="#contact" class="btn btn--primary">Get In Touch</a>
+    <div class="hero__actions">
+      <a href="#contact" class="btn btn--primary btn--pill">
+        Get Started
+        <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="btn btn--ghost btn--pill">
+        Learn More
+        <span class="btn__icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BENTO HIGHLIGHTS ═══════════════ -->
+  <section class="section section--flush" id="services">
+    <div class="bento-grid">
+
+      <!-- Feature card -->
+      <div class="bento-card bento-card--tall">
+        <div>
+          <span class="bento-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l18-7-7 18-2.5-7.5L3 11z"/></svg>
+          </span>
+          <h3 class="bento-card__title">Mastering the Art of Digital Growth</h3>
+          <p class="bento-card__text">A program that goes beyond the basics, offering a deep dive into the art and science of digital marketing.</p>
+        </div>
+        <a href="#about" class="bento-card__link">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Image / featured work card -->
+      <div class="bento-card bento-card--tall bento-card--image">
+        <span class="bento-badge bento-badge--top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Let's Grow
+        </span>
+        <div class="bento-card__image-fill"></div>
+        <span class="bento-badge bento-badge--bottom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          230+ Views
+        </span>
+      </div>
+
+      <!-- Stat card -->
+      <div class="bento-card bento-stat">
+        <span class="bento-card__icon bento-card__icon--emerald">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </span>
+        <p class="bento-stat__label">Satisfied Clients</p>
+        <p class="bento-stat__num">50+</p>
+        <div class="avatar-stack">
+          <span class="avatar avatar--a"></span>
+          <span class="avatar avatar--b"></span>
+          <span class="avatar avatar--c"></span>
+        </div>
+      </div>
+
+      <!-- Text / growth potential card -->
+      <div class="bento-card">
+        <h3 class="bento-card__title">Built for Ambitious Brands</h3>
+        <p class="bento-card__text">Commitment to excellence, agility, and forward-thinking positions us as the catalyst for your business growth.</p>
+        <div class="bento-card__footer">
+          <div class="avatar-stack">
+            <span class="avatar avatar--a"></span>
+            <span class="avatar avatar--b"></span>
+            <span class="avatar avatar--c"></span>
+          </div>
+          <span class="bento-card__footer-text">Trusted by 30+ brands</span>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- ═══════════════ ABOUT ═══════════════ -->
@@ -46,29 +120,6 @@
       Add a short paragraph here introducing the company — who you are, what you stand for,
       and what makes you different.
     </p>
-  </section>
-
-  <!-- ═══════════════ SERVICES ═══════════════ -->
-  <section class="section" id="services">
-    <p class="eyebrow">What We Do</p>
-    <h2 class="section__title">Our Services</h2>
-    <div class="grid grid--3">
-      <div class="card">
-        <span class="card__num">01</span>
-        <h3 class="card__title">Service One</h3>
-        <p class="card__text">Short description of this service goes here.</p>
-      </div>
-      <div class="card">
-        <span class="card__num">02</span>
-        <h3 class="card__title">Service Two</h3>
-        <p class="card__text">Short description of this service goes here.</p>
-      </div>
-      <div class="card">
-        <span class="card__num">03</span>
-        <h3 class="card__title">Service Three</h3>
-        <p class="card__text">Short description of this service goes here.</p>
-      </div>
-    </div>
   </section>
 
   <!-- ═══════════════ GALLERY ═══════════════ -->

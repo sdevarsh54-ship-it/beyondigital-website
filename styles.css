@@ -124,6 +124,40 @@ em {
   border-color: var(--color-emerald);
   transform: translateY(-2px);
 }
+.btn--ghost {
+  background: transparent;
+  color: var(--color-charcoal);
+}
+.btn--ghost:hover {
+  border-color: var(--color-emerald);
+  color: var(--color-emerald);
+  transform: translateY(-2px);
+}
+.btn--pill {
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.btn__arrow {
+  width: 16px;
+  height: 16px;
+}
+.btn__icon-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.btn__icon-circle svg {
+  width: 13px;
+  height: 13px;
+}
 
 /* ══════════════════════════════════════════
    HEADER / NAV
@@ -189,9 +223,10 @@ em {
   justify-content: center;
 }
 .hero__title {
-  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
-  line-height: 1.15;
-  margin-bottom: 1.4rem;
+  font-size: clamp(2.6rem, 6.5vw, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.6rem;
 }
 .hero__subtitle {
   font-size: 1.05rem;
@@ -199,6 +234,13 @@ em {
   color: var(--color-grey);
   max-width: 480px;
   margin: 0 auto 2.4rem;
+}
+.hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* ══════════════════════════════════════════
@@ -270,6 +312,172 @@ em {
   font-weight: 300;
   color: var(--color-grey);
 }
+
+/* ── Bento grid (hero highlights) ── */
+.section--flush {
+  border-top: none;
+  padding-top: 0;
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  text-align: left;
+}
+.bento-card {
+  background: var(--color-ivory);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 2.2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.35s var(--ease), box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
+}
+.bento-card:hover {
+  border-color: var(--color-emerald);
+  box-shadow: 0 0 0 1px var(--color-emerald), 0 0 28px 6px rgba(6, 78, 59, 0.35);
+  transform: translateY(-4px);
+}
+.bento-card--tall {
+  grid-row: span 2;
+  justify-content: space-between;
+}
+.bento-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(184, 134, 11, 0.12);
+  color: var(--color-gold);
+}
+.bento-card__icon svg {
+  width: 18px;
+  height: 18px;
+}
+.bento-card__icon--emerald {
+  background: rgba(6, 78, 59, 0.12);
+  color: var(--color-emerald);
+}
+.bento-card__title {
+  font-size: 1.2rem;
+  margin: 0.9rem 0 0.5rem;
+}
+.bento-card__text {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--color-grey);
+}
+.bento-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-cta);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-charcoal);
+  align-self: flex-start;
+}
+.bento-card__link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s var(--ease);
+}
+.bento-card__link:hover svg {
+  transform: translateX(3px);
+}
+.bento-card__link:hover {
+  color: var(--color-emerald);
+}
+
+/* image / featured-work card */
+.bento-card--image {
+  padding: 0;
+}
+.bento-card__image-fill {
+  flex: 1;
+  background: linear-gradient(150deg, #d8e4dd 0%, #b9cdbf 45%, #8ea998 100%);
+  min-height: 260px;
+}
+.bento-badge {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-ivory);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-cta);
+  font-size: 0.72rem;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(18, 18, 18, 0.12);
+}
+.bento-badge svg {
+  width: 14px;
+  height: 14px;
+  color: var(--color-emerald);
+}
+.bento-badge--top {
+  top: 1.2rem;
+  left: 1.2rem;
+}
+.bento-badge--bottom {
+  bottom: 1.2rem;
+  right: 1.2rem;
+}
+
+/* stat card */
+.bento-stat {
+  justify-content: center;
+}
+.bento-stat__label {
+  font-family: var(--font-cta);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-grey);
+}
+.bento-stat__num {
+  font-size: 2.4rem;
+}
+
+/* card footer with avatar stack */
+.bento-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+.bento-card__footer-text {
+  font-family: var(--font-cta);
+  font-size: 0.78rem;
+  color: var(--color-grey);
+}
+.avatar-stack {
+  display: flex;
+}
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--color-ivory);
+  margin-left: -8px;
+}
+.avatar:first-child {
+  margin-left: 0;
+}
+.avatar--a { background: linear-gradient(135deg, var(--color-gold), #e0b84a); }
+.avatar--b { background: linear-gradient(135deg, var(--color-emerald), #0a7a5c); }
+.avatar--c { background: linear-gradient(135deg, var(--color-grey), #c4c4c4); }
 
 /* ── Gallery ── */
 .gallery__item {
@@ -364,6 +572,16 @@ em {
     margin: 0 auto;
   }
   .cta .eyebrow { justify-content: center; }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-card--tall {
+    grid-row: auto;
+  }
+  .bento-card__image-fill {
+    min-height: 200px;
+  }
 }
 
 @media (max-width: 480px) {
