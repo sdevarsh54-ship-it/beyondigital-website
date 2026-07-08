@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BeyonDigital — Agency Brochure</title>
+<meta name="description" content="BeyonDigital agency capabilities brochure — brand strategy, web design & development, content, and performance marketing." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --paper:   #f5f5f0;
+    --ink:     #121212;
+    --emerald: #064E3B;
+    --gold:    #b8860b;
+    --grey:    #8e8e8e;
+    --hair:    rgba(18,18,18,0.14);
+    --hair-on-dark: rgba(245,245,240,0.22);
+    --desk:    #e7e4db;
+    --desk-shadow: rgba(18,18,18,0.22);
+
+    --font-head:  'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body:  'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --font-label: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{ --desk:#15181a; --desk-shadow: rgba(0,0,0,0.55); }
+  }
+  :root[data-theme="dark"]{ --desk:#15181a; --desk-shadow: rgba(0,0,0,0.55); }
+  :root[data-theme="light"]{ --desk:#e7e4db; --desk-shadow: rgba(18,18,18,0.22); }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    background:var(--desk);
+    color:var(--ink);
+    font-family:var(--font-body);
+    transition:background .3s ease;
+  }
+  h1,h2,h3,blockquote{ text-wrap:balance; }
+  a{ color:inherit; }
+
+  /* ── toolbar (screen only) ───────────────────────── */
+  .toolbar{
+    position:fixed; top:20px; right:20px; z-index:50;
+    display:flex; gap:10px;
+  }
+  .toolbar button, .toolbar a{
+    font-family:var(--font-label);
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    background:var(--ink);
+    color:var(--paper);
+    border:1px solid var(--ink);
+    padding:0.65rem 1.1rem;
+    cursor:pointer;
+    text-decoration:none;
+    box-shadow:0 8px 20px var(--desk-shadow);
+  }
+  .toolbar button:hover, .toolbar a:hover{ background:var(--emerald); border-color:var(--emerald); }
+  .toolbar a.secondary{ background:transparent; color:var(--ink); border-color:var(--ink); }
+  @media (prefers-color-scheme: dark){ .toolbar a.secondary{ color:var(--paper); border-color:var(--paper); } }
+  :root[data-theme="dark"] .toolbar a.secondary{ color:var(--paper); border-color:var(--paper); }
+  :root[data-theme="light"] .toolbar a.secondary{ color:var(--ink); border-color:var(--ink); }
+
+  /* ── sheet (one brochure page) ───────────────────── */
+  .sheet{
+    width:min(900px, 94vw);
+    min-height:74vh;
+    margin:56px auto;
+    background:var(--paper);
+    color:var(--ink);
+    box-shadow:0 40px 70px -30px var(--desk-shadow), 0 2px 0 rgba(0,0,0,0.04);
+    display:flex;
+    flex-direction:column;
+    padding:9% 8%;
+    position:relative;
+  }
+  .sheet--dark{ background:var(--ink); color:var(--paper); }
+
+  .sheet__foot{
+    margin-top:auto;
+    padding-top:28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-family:var(--font-label);
+    font-size:0.68rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--grey);
+    border-top:1px solid var(--hair);
+  }
+  .sheet--dark .sheet__foot{ border-top-color:var(--hair-on-dark); color:rgba(245,245,240,0.55); }
+
+  .eyebrow{
+    font-family:var(--font-label);
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 18px;
+  }
+
+  .headline{
+    font-family:var(--font-head);
+    font-weight:600;
+    font-size:clamp(1.7rem, 4vw, 2.6rem);
+    line-height:1.15;
+    margin:0 0 22px;
+  }
+  .headline em{ font-style:italic; font-weight:400; color:var(--emerald); }
+  .sheet--dark .headline em{ color:#d7b56a; }
+
+  .lede{
+    font-weight:300;
+    font-size:1.02rem;
+    line-height:1.75;
+    max-width:62ch;
+    color:rgba(18,18,18,0.78);
+  }
+  .sheet--dark .lede{ color:rgba(245,245,240,0.82); }
+
+  /* ── cover ─────────────────────────────────────── */
+  .cover__top{ display:flex; justify-content:space-between; align-items:flex-start; }
+  .cover__mark{
+    font-family:var(--font-head);
+    font-size:clamp(2.6rem, 7vw, 4.2rem);
+    line-height:1;
+    margin:auto 0;
+  }
+  .cover__mark em{ font-style:italic; font-weight:400; color:#d7b56a; }
+  .cover__rule{ width:64px; height:2px; background:var(--gold); margin:22px 0 26px; }
+  .cover__tagline{
+    font-family:var(--font-body);
+    font-weight:300;
+    font-size:1.15rem;
+    color:rgba(245,245,240,0.82);
+    max-width:34ch;
+  }
+  .cover__meta{ text-align:right; font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(245,245,240,0.6); }
+
+  /* ── stat row ──────────────────────────────────── */
+  .stats{ display:flex; flex-wrap:wrap; gap:0; margin-top:auto; padding-top:14px; }
+  .stat{ flex:1 1 22%; padding:22px 20px 0 0; border-top:1px solid var(--hair); }
+  .stat__num{ display:block; font-family:var(--font-head); font-weight:700; font-size:2rem; font-variant-numeric:tabular-nums; color:var(--emerald); }
+  .stat__label{ display:block; font-family:var(--font-label); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--grey); margin-top:6px; }
+
+  /* ── capability list ───────────────────────────── */
+  .cap-list{ display:flex; flex-direction:column; }
+  .cap{ display:grid; grid-template-columns:1fr 2fr; gap:24px; padding:20px 0; border-top:1px solid var(--hair); align-items:baseline; }
+  .cap:last-child{ border-bottom:1px solid var(--hair); }
+  .cap__name{ font-family:var(--font-head); font-size:1.15rem; font-weight:600; }
+  .cap__desc{ font-size:0.92rem; font-weight:300; line-height:1.6; color:rgba(18,18,18,0.75); }
+
+  /* ── case studies ──────────────────────────────── */
+  .case-list{ display:flex; flex-direction:column; gap:0; }
+  .case{ display:grid; grid-template-columns:auto 1fr; gap:26px; padding:22px 0; border-top:1px solid var(--hair); align-items:center; }
+  .case:last-child{ border-bottom:1px solid var(--hair); }
+  .case__stat{ font-family:var(--font-head); font-weight:700; font-size:2.3rem; color:var(--gold); min-width:1.8ch; font-variant-numeric:tabular-nums; }
+  .case__client{ font-family:var(--font-head); font-size:1.05rem; font-weight:600; margin:0 0 4px; }
+  .case__desc{ font-size:0.88rem; font-weight:300; color:rgba(18,18,18,0.72); line-height:1.55; }
+  .case__tag{ display:block; margin-top:6px; font-family:var(--font-label); font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--grey); }
+
+  /* ── testimonials ──────────────────────────────── */
+  .quotes{ display:flex; flex-direction:column; gap:26px; }
+  .quote{ padding-left:22px; border-left:2px solid var(--gold); }
+  .quote p{ font-family:var(--font-head); font-style:italic; font-size:1.05rem; line-height:1.55; margin:0 0 10px; }
+  .quote cite{ font-style:normal; font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--grey); }
+  .quote cite b{ color:var(--ink); font-weight:600; }
+
+  /* ── back cover / contact ──────────────────────── */
+  .contact__row{ display:flex; flex-wrap:wrap; gap:40px; margin-top:34px; }
+  .contact__block h4{ font-family:var(--font-label); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:#d7b56a; margin:0 0 8px; font-weight:600; }
+  .contact__block a, .contact__block span{ display:block; font-family:var(--font-body); font-weight:300; font-size:0.95rem; color:rgba(245,245,240,0.88); text-decoration:none; }
+  .contact__block a:hover{ color:#d7b56a; }
+  .cta-line{ font-family:var(--font-head); font-size:clamp(1.5rem,3.4vw,2.1rem); line-height:1.3; margin:0 0 4px; }
+  .cta-line em{ font-style:italic; color:#d7b56a; }
+
+  @media (max-width: 640px){
+    .cap{ grid-template-columns:1fr; gap:6px; }
+    .case{ grid-template-columns:1fr; gap:8px; }
+    .stat{ flex:1 1 45%; }
+    .cover__top{ flex-direction:column; gap:40px; }
+    .cover__meta{ text-align:left; }
+  }
+
+  /* ── print ─────────────────────────────────────── */
+  @page{ size:A4; margin:0; }
+  @media print{
+    .no-print{ display:none !important; }
+    body{ background:none; }
+    .sheet{
+      width:210mm; min-height:297mm;
+      margin:0; padding:20mm 18mm;
+      box-shadow:none;
+      page-break-after:always;
+    }
+    .sheet:last-of-type{ page-break-after:auto; }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .sheet{ animation:rise .5s ease-out both; }
+    .sheet:nth-of-type(2){ animation-delay:.04s; }
+  }
+  @keyframes rise{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:translateY(0); } }
+</style>
+</head>
+<body>
+
+  <div class="toolbar no-print">
+    <button onclick="window.print()">Save as PDF</button>
+    <a class="secondary" href="index.html">Back to site</a>
+  </div>
+
+  <!-- 1 — COVER -->
+  <section class="sheet sheet--dark">
+    <div class="cover__top">
+      <div class="cover__meta">Agency Brochure<br/>2026 Edition</div>
+    </div>
+    <div>
+      <div class="cover__mark">Beyon<em>digital</em></div>
+      <div class="cover__rule"></div>
+      <p class="cover__tagline">We build brands that go beyond — marketing, design, and development under one roof.</p>
+    </div>
+    <div class="sheet__foot">
+      <span>London · India · Dubai</span>
+      <span>01 / 06</span>
+    </div>
+  </section>
+
+  <!-- 2 — ABOUT / STATS -->
+  <section class="sheet">
+    <p class="eyebrow">About Us</p>
+    <h2 class="headline">Beyond the <em>algorithm.</em></h2>
+    <p class="lede">
+      BeyonDigital is a full-service digital agency built for ambitious companies who've outgrown patchwork vendors.
+      We bring brand strategy, web design and development, content, and performance marketing together under one
+      roof — so every channel pulls in the same direction, and growth compounds instead of scattering.
+    </p>
+    <div class="stats">
+      <div class="stat"><span class="stat__num">50+</span><span class="stat__label">Happy Clients</span></div>
+      <div class="stat"><span class="stat__num">200+</span><span class="stat__label">Projects Delivered</span></div>
+      <div class="stat"><span class="stat__num">340%</span><span class="stat__label">Avg. ROI Lift</span></div>
+      <div class="stat"><span class="stat__num">8+</span><span class="stat__label">Years Experience</span></div>
+    </div>
+    <div class="sheet__foot"><span>BeyonDigital</span><span>02 / 06</span></div>
+  </section>
+
+  <!-- 3 — CAPABILITIES -->
+  <section class="sheet">
+    <p class="eyebrow">Capabilities</p>
+    <h2 class="headline">Everything a growing <em>brand needs.</em></h2>
+    <div class="cap-list">
+      <div class="cap">
+        <div class="cap__name">Brand Strategy</div>
+        <div class="cap__desc">Deep audience research, positioning, and identity systems that make your brand unmissable in a crowded market.</div>
+      </div>
+      <div class="cap">
+        <div class="cap__name">Web Design &amp; Development</div>
+        <div class="cap__desc">Beautiful, fast, and conversion-focused websites and web applications built to perform and impress.</div>
+      </div>
+      <div class="cap">
+        <div class="cap__name">Content Creation</div>
+        <div class="cap__desc">Art-directed visuals, motion graphics, and copy that stops the scroll, builds trust, and converts audiences.</div>
+      </div>
+      <div class="cap">
+        <div class="cap__name">Performance Marketing</div>
+        <div class="cap__desc">Data-obsessed ad management across Google, Meta, and LinkedIn with full-funnel attribution and clear ROI.</div>
+      </div>
+      <div class="cap">
+        <div class="cap__name">SEO &amp; Growth</div>
+        <div class="cap__desc">Technical and content SEO that compounds organic traffic long after the campaign budget stops.</div>
+      </div>
+      <div class="cap">
+        <div class="cap__name">Analytics &amp; Reporting</div>
+        <div class="cap__desc">Clear, honest dashboards that connect spend to revenue — no vanity metrics, no black boxes.</div>
+      </div>
+    </div>
+    <div class="sheet__foot"><span>BeyonDigital</span><span>03 / 06</span></div>
+  </section>
+
+  <!-- 4 — SELECTED WORK -->
+  <section class="sheet">
+    <p class="eyebrow">Selected Work</p>
+    <h2 class="headline">Results that <em>speak for themselves.</em></h2>
+    <div class="case-list">
+      <div class="case">
+        <div class="case__stat">420%</div>
+        <div>
+          <p class="case__client">RetailBrand Co.</p>
+          <p class="case__desc">Grew organic traffic by 420% and doubled revenue in 9 months through targeted SEO and content strategy.</p>
+          <span class="case__tag">E-commerce · SEO · Content</span>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case__stat">65%</div>
+        <div>
+          <p class="case__client">TechFlow SaaS</p>
+          <p class="case__desc">Redesigned the product landing page, increasing trial sign-ups by 65% within the first 30 days of launch.</p>
+          <span class="case__tag">SaaS · Web Design · UX</span>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case__stat">3×</div>
+        <div>
+          <p class="case__client">Harvest Kitchen</p>
+          <p class="case__desc">Full rebrand — logo, menus, website, and social — resulting in a 3x increase in foot traffic and bookings.</p>
+          <span class="case__tag">Restaurant · Branding · Social</span>
+        </div>
+      </div>
+    </div>
+    <div class="sheet__foot"><span>BeyonDigital</span><span>04 / 06</span></div>
+  </section>
+
+  <!-- 5 — TESTIMONIALS -->
+  <section class="sheet">
+    <p class="eyebrow">Client Voices</p>
+    <h2 class="headline">From our <em>beloved clients.</em></h2>
+    <div class="quotes">
+      <div class="quote">
+        <p>"BeyonDigital transformed our online presence. Within six months, our leads tripled and our website finally reflects the quality of our brand. They're not a vendor — they're a true partner."</p>
+        <cite><b>Alex Kim</b> — CEO, RetailBrand Co.</cite>
+      </div>
+      <div class="quote">
+        <p>"The team genuinely cared about our success. They brought ideas we hadn't thought of and executed flawlessly. Our trial sign-ups jumped 65% in the first month after launch."</p>
+        <cite><b>Sara Reynolds</b> — Founder, TechFlow SaaS</cite>
+      </div>
+      <div class="quote">
+        <p>"From branding to our new website, BeyonDigital delivered beyond expectations. Our customers constantly compliment our new look and our bookings have never been higher."</p>
+        <cite><b>Marcus Johnson</b> — Owner, Harvest Kitchen</cite>
+      </div>
+    </div>
+    <div class="sheet__foot"><span>BeyonDigital</span><span>05 / 06</span></div>
+  </section>
+
+  <!-- 6 — CONTACT / BACK COVER -->
+  <section class="sheet sheet--dark">
+    <p class="eyebrow">Let's Talk</p>
+    <p class="cta-line">Ready to go beyond digital?<br/><em>The algorithm waits for no one.</em></p>
+    <div class="contact__row">
+      <div class="contact__block">
+        <h4>Email</h4>
+        <a href="mailto:hello@beyondigital.co.uk">hello@beyondigital.co.uk</a>
+      </div>
+      <div class="contact__block">
+        <h4>Studio</h4>
+        <span>London · India · Dubai</span>
+      </div>
+      <div class="contact__block">
+        <h4>Follow</h4>
+        <a href="https://www.instagram.com/beyondigital.co/" target="_blank" rel="noopener noreferrer">Instagram — @beyondigital.co</a>
+      </div>
+    </div>
+    <div class="sheet__foot"><span>© 2026 BeyonDigital. All rights reserved.</span><span>06 / 06</span></div>
+  </section>
+
+</body>
+</html>
