@@ -10,15 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Custom cursor -->
-  <div class="cursor-glow" id="cursorGlow"></div>
+  <!-- Custom dual-speed cursor -->
+  <div class="cursor-ring" id="cursorRing"><span class="cursor-ring__label" id="cursorLabel"></span></div>
+  <div class="cursor-dot" id="cursorDot"></div>
 
   <!-- ═══════════════ NAV ═══════════════ -->
   <nav class="nav">
@@ -48,12 +46,14 @@
   <section class="hero">
 
     <!-- LEFT: visual panel -->
-    <div class="hero__visual">
+    <div class="hero__visual" id="heroVisual">
+      <div class="blob blob--a"></div>
+      <div class="blob blob--b"></div>
       <div class="hero__image-wrap">
         <div class="hero__image-inner">
           <div class="hero__deco-dot"></div>
           <!-- CSS mockup cards -->
-          <div class="hero__mockup">
+          <div class="hero__mockup" id="heroMockup">
             <div class="mockup__card mockup__card--1">
               <div class="mockup__bar"></div>
               <div class="mockup__bar mockup__bar--short"></div>
@@ -133,13 +133,13 @@
 
   <!-- ═══════════════ SERVICES ═══════════════ -->
   <section class="services" id="services">
-    <div class="section-header" data-aos="fade-up">
+    <div class="section-header">
       <span class="section-tag">Expertise in</span>
       <h2 class="section-title">Growing<br/><em>every brand with</em></h2>
     </div>
 
     <div class="services__grid">
-      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="service-card reveal-card">
         <div class="service-card__num">01</div>
         <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 17.5a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0z"/></svg>
@@ -147,7 +147,7 @@
         <h3>Brand Strategy</h3>
         <p>Deep audience research, positioning, and identity systems that make your brand unmissable in a crowded market.</p>
       </div>
-      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="service-card reveal-card">
         <div class="service-card__num">02</div>
         <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -155,7 +155,7 @@
         <h3>Web Design & Dev</h3>
         <p>Beautiful, fast, and conversion-focused websites and web applications built to perform and impress.</p>
       </div>
-      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="160">
+      <div class="service-card reveal-card">
         <div class="service-card__num">03</div>
         <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
@@ -163,7 +163,7 @@
         <h3>Content Creation</h3>
         <p>Art-directed visuals, motion graphics, and copy that stops the scroll, builds trust, and converts audiences.</p>
       </div>
-      <div class="service-card reveal-card" data-aos="fade-up" data-aos-delay="240">
+      <div class="service-card reveal-card">
         <div class="service-card__num">04</div>
         <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
@@ -176,13 +176,13 @@
 
   <!-- ═══════════════ FEATURED WORK ═══════════════ -->
   <section class="work" id="work">
-    <div class="section-header" data-aos="fade-up">
+    <div class="section-header">
       <span class="section-tag">Work we've done</span>
       <h2 class="section-title">Results that<br/><em>speak for themselves.</em></h2>
     </div>
 
     <div class="work__grid">
-      <div class="work-card" data-aos="fade-right" data-aos-delay="0">
+      <div class="work-card reveal-card">
         <div class="work-card__image work-card__image--a">
           <div class="work-card__overlay"></div>
         </div>
@@ -192,7 +192,7 @@
           <span class="work-card__tag">E-commerce · SEO · Content</span>
         </div>
       </div>
-      <div class="work-card work-card--tall" data-aos="fade-up" data-aos-delay="100">
+      <div class="work-card work-card--tall reveal-card">
         <div class="work-card__image work-card__image--b">
           <div class="work-card__overlay"></div>
         </div>
@@ -202,7 +202,7 @@
           <span class="work-card__tag">SaaS · Web Design · UX</span>
         </div>
       </div>
-      <div class="work-card" data-aos="fade-left" data-aos-delay="200">
+      <div class="work-card reveal-card">
         <div class="work-card__image work-card__image--c">
           <div class="work-card__overlay"></div>
         </div>
@@ -217,48 +217,79 @@
 
   <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
   <section class="work" id="about">
-    <div class="section-header" data-aos="fade-up">
+    <div class="section-header">
       <span class="section-tag">A word</span>
       <h2 class="section-title">From our<br/><em>Beloved Clients</em></h2>
     </div>
 
-    <section class="testimonial" data-aos="fade-up">
-      <div class="testimonial__grid">
+    <section class="testimonial">
+      <div class="testimonial__viewport" id="testiViewport">
+        <div class="testimonial__track" id="testiTrack">
 
-        <div class="testimonial__card">
-          <div class="testimonial__quote-mark">"</div>
-          <blockquote>"BeyonDigital transformed our online presence. Within six months, our leads tripled and our website finally reflects the quality of our brand. They're not a vendor — they're a true partner."</blockquote>
-          <cite>
-            <span class="cite__name">Alex Kim</span>
-            <span class="cite__role">CEO, RetailBrand Co.</span>
-          </cite>
+          <div class="testimonial__card">
+            <div class="testimonial__quote-mark">"</div>
+            <blockquote>"BeyonDigital transformed our online presence. Within six months, our leads tripled and our website finally reflects the quality of our brand. They're not a vendor — they're a true partner."</blockquote>
+            <cite>
+              <span class="cite__name">Alex Kim</span>
+              <span class="cite__role">CEO, RetailBrand Co.</span>
+            </cite>
+          </div>
+
+          <div class="testimonial__card">
+            <div class="testimonial__quote-mark">"</div>
+            <blockquote>"The team genuinely cared about our success. They brought ideas we hadn't thought of and executed flawlessly. Our trial sign-ups jumped 65% in the first month after launch."</blockquote>
+            <cite>
+              <span class="cite__name">Sara Reynolds</span>
+              <span class="cite__role">Founder, TechFlow SaaS</span>
+            </cite>
+          </div>
+
+          <div class="testimonial__card">
+            <div class="testimonial__quote-mark">"</div>
+            <blockquote>"From branding to our new website, BeyonDigital delivered beyond expectations. Our customers constantly compliment our new look and our bookings have never been higher."</blockquote>
+            <cite>
+              <span class="cite__name">Marcus Johnson</span>
+              <span class="cite__role">Owner, Harvest Kitchen</span>
+            </cite>
+          </div>
+
+          <!-- duplicated set for seamless infinite loop -->
+          <div class="testimonial__card" aria-hidden="true">
+            <div class="testimonial__quote-mark">"</div>
+            <blockquote>"BeyonDigital transformed our online presence. Within six months, our leads tripled and our website finally reflects the quality of our brand. They're not a vendor — they're a true partner."</blockquote>
+            <cite>
+              <span class="cite__name">Alex Kim</span>
+              <span class="cite__role">CEO, RetailBrand Co.</span>
+            </cite>
+          </div>
+
+          <div class="testimonial__card" aria-hidden="true">
+            <div class="testimonial__quote-mark">"</div>
+            <blockquote>"The team genuinely cared about our success. They brought ideas we hadn't thought of and executed flawlessly. Our trial sign-ups jumped 65% in the first month after launch."</blockquote>
+            <cite>
+              <span class="cite__name">Sara Reynolds</span>
+              <span class="cite__role">Founder, TechFlow SaaS</span>
+            </cite>
+          </div>
+
+          <div class="testimonial__card" aria-hidden="true">
+            <div class="testimonial__quote-mark">"</div>
+            <blockquote>"From branding to our new website, BeyonDigital delivered beyond expectations. Our customers constantly compliment our new look and our bookings have never been higher."</blockquote>
+            <cite>
+              <span class="cite__name">Marcus Johnson</span>
+              <span class="cite__role">Owner, Harvest Kitchen</span>
+            </cite>
+          </div>
+
         </div>
-
-        <div class="testimonial__card">
-          <div class="testimonial__quote-mark">"</div>
-          <blockquote>"The team genuinely cared about our success. They brought ideas we hadn't thought of and executed flawlessly. Our trial sign-ups jumped 65% in the first month after launch."</blockquote>
-          <cite>
-            <span class="cite__name">Sara Reynolds</span>
-            <span class="cite__role">Founder, TechFlow SaaS</span>
-          </cite>
-        </div>
-
-        <div class="testimonial__card">
-          <div class="testimonial__quote-mark">"</div>
-          <blockquote>"From branding to our new website, BeyonDigital delivered beyond expectations. Our customers constantly compliment our new look and our bookings have never been higher."</blockquote>
-          <cite>
-            <span class="cite__name">Marcus Johnson</span>
-            <span class="cite__role">Owner, Harvest Kitchen</span>
-          </cite>
-        </div>
-
       </div>
     </section>
   </section>
 
   <!-- ═══════════════ CTA BAND ═══════════════ -->
-  <section class="cta-band" id="contact" data-aos="fade-up">
-    <div class="cta-band__inner">
+  <section class="cta-band" id="contact">
+    <div class="blob blob--cta"></div>
+    <div class="cta-band__inner reveal-fade">
       <h2>
         <span class="cta-light">Ready to go beyond digital?</span><br>
         <em>The algorithm waits for no one.</em>
@@ -270,11 +301,11 @@
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="footer">
     <div class="footer__top">
-      <div class="footer__brand" data-aos="fade-right">
+      <div class="footer__brand reveal-fade">
         <div class="footer__logo">BeyonDigital</div>
         <p>Redefining what digital can do for the modern enterprise — marketing, design, and development under one roof.</p>
       </div>
-      <div class="footer__links" data-aos="fade-left">
+      <div class="footer__links reveal-fade">
         <div class="footer__col">
           <h4>Agency</h4>
           <a href="#">About</a>
@@ -301,22 +332,79 @@
     </div>
   </footer>
 
-  <!-- AOS + custom JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Lenis smooth scroll + custom motion JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
   <script>
-    AOS.init({ duration: 900, easing: 'ease-out-cubic', once: true, offset: 80 });
+    document.documentElement.classList.add('js-ready');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
 
-    // Cursor glow
-    const glow = document.getElementById('cursorGlow');
-    let mx = -200, my = -200, cx = -200, cy = -200;
-    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-    function animateCursor() {
-      cx += (mx - cx) * 0.12;
-      cy += (my - cy) * 0.12;
-      glow.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-      requestAnimationFrame(animateCursor);
+    // Lenis smooth scroll
+    let lenis = null;
+    if (!prefersReducedMotion && window.Lenis) {
+      lenis = new Lenis({ duration: 1.15, easing: t => 1 - Math.pow(1 - t, 3), smoothWheel: true });
+      const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href');
+          if (id.length > 1) {
+            const target = document.querySelector(id);
+            if (target) { e.preventDefault(); lenis.scrollTo(target, { offset: -20 }); }
+          }
+        });
+      });
     }
-    animateCursor();
+
+    // Dual-speed morphing cursor: fast dot + trailing ring that morphs on hover
+    const cursorDot = document.getElementById('cursorDot');
+    const cursorRing = document.getElementById('cursorRing');
+    const cursorLabel = document.getElementById('cursorLabel');
+    if (hasFinePointer && cursorDot && cursorRing) {
+      let mx = -100, my = -100, dx = -100, dy = -100, rx = -100, ry = -100;
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+      function animateCursor() {
+        dx += (mx - dx) * 0.35;
+        dy += (my - dy) * 0.35;
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        cursorDot.style.transform = `translate(${dx}px, ${dy}px)`;
+        cursorRing.style.transform = `translate(${rx}px, ${ry}px)`;
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+
+      document.querySelectorAll('a, button, .btn').forEach(el => {
+        el.addEventListener('mouseenter', () => cursorRing.classList.add('cursor-ring--hover'));
+        el.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor-ring--hover'));
+      });
+      document.querySelectorAll('.work-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursorRing.classList.add('cursor-ring--view');
+          cursorLabel.textContent = 'View';
+        });
+        el.addEventListener('mouseleave', () => {
+          cursorRing.classList.remove('cursor-ring--view');
+          cursorLabel.textContent = '';
+        });
+      });
+    } else if (cursorDot && cursorRing) {
+      cursorDot.style.display = 'none';
+      cursorRing.style.display = 'none';
+    }
+
+    // 3D tilt on hero mockup, following the pointer
+    const heroVisual = document.getElementById('heroVisual');
+    const heroMockup = document.getElementById('heroMockup');
+    if (hasFinePointer && !prefersReducedMotion && heroVisual && heroMockup) {
+      heroVisual.addEventListener('mousemove', e => {
+        const rect = heroVisual.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width - 0.5;
+        const py = (e.clientY - rect.top) / rect.height - 0.5;
+        heroMockup.style.transform = `rotateY(${px * 12}deg) rotateX(${-py * 12}deg)`;
+      });
+      heroVisual.addEventListener('mouseleave', () => { heroMockup.style.transform = ''; });
+    }
 
     // Hamburger
     const hamburger = document.getElementById('hamburger');
@@ -364,15 +452,29 @@
     }, { threshold: 0.3 });
     sectionTitles.forEach(t => wordObserver.observe(t));
 
-    // Marquee speed on scroll
+    // Scroll reveal system (replaces AOS) — fade/spring-rotate cards, curtain-reveal images,
+    // and drawn underlines on section headers
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal-card, .reveal-fade, .section-header').forEach(el => revealObserver.observe(el));
+
+    // Marquee speed + direction on scroll
     let lastScrollY = window.scrollY;
     let marqueeSpeed = 28;
     const track = document.querySelector('.marquee-track');
     window.addEventListener('scroll', () => {
-      const delta = Math.abs(window.scrollY - lastScrollY);
-      marqueeSpeed = Math.max(8, 28 - delta * 0.4);
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollY;
+      marqueeSpeed = Math.max(6, 28 - Math.abs(delta) * 0.4);
       track.style.animationDuration = marqueeSpeed + 's';
-      lastScrollY = window.scrollY;
+      track.style.animationDirection = delta < 0 ? 'reverse' : 'normal';
+      lastScrollY = currentY;
     });
 
     // Counter animation on proof numbers
@@ -416,17 +518,55 @@
       card.addEventListener('mouseleave', () => card.classList.remove('card-active'));
     });
 
-    // Testimonial clip-path reveal
-    const testimonial = document.querySelector('.testimonial');
-    const clipObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('clip-revealed');
-          clipObserver.unobserve(entry.target);
+    // Infinite auto-scrolling, draggable testimonial carousel
+    const testiViewport = document.getElementById('testiViewport');
+    const testiTrack = document.getElementById('testiTrack');
+    if (testiViewport && testiTrack) {
+      let isDown = false, dragged = false, autoPaused = false, startX = 0, scrollStart = 0, resumeTimer = null;
+      testiViewport.scrollLeft = 1;
+
+      function normalize() {
+        const half = testiTrack.scrollWidth / 2;
+        if (testiViewport.scrollLeft >= half) testiViewport.scrollLeft -= half;
+      }
+      function autoScroll() {
+        if (!autoPaused && !prefersReducedMotion) {
+          testiViewport.scrollLeft += 0.6;
+          normalize();
         }
+        requestAnimationFrame(autoScroll);
+      }
+      requestAnimationFrame(autoScroll);
+
+      const pauseThenResume = () => {
+        clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(() => { autoPaused = false; }, 1400);
+      };
+
+      testiViewport.addEventListener('pointerdown', e => {
+        isDown = true; dragged = false; autoPaused = true;
+        testiViewport.classList.add('dragging');
+        startX = e.clientX; scrollStart = testiViewport.scrollLeft;
+        clearTimeout(resumeTimer);
       });
-    }, { threshold: 0.25 });
-    if (testimonial) clipObserver.observe(testimonial);
+      window.addEventListener('pointermove', e => {
+        if (!isDown) return;
+        const dx = e.clientX - startX;
+        if (Math.abs(dx) > 4) dragged = true;
+        testiViewport.scrollLeft = scrollStart - dx;
+        normalize();
+      });
+      window.addEventListener('pointerup', () => {
+        if (!isDown) return;
+        isDown = false;
+        testiViewport.classList.remove('dragging');
+        pauseThenResume();
+      });
+      testiViewport.addEventListener('click', e => { if (dragged) e.preventDefault(); }, true);
+      testiViewport.addEventListener('mouseenter', () => { autoPaused = true; clearTimeout(resumeTimer); });
+      testiViewport.addEventListener('mouseleave', () => { if (!isDown) pauseThenResume(); });
+      testiViewport.addEventListener('wheel', () => { autoPaused = true; pauseThenResume(); }, { passive: true });
+    }
   </script>
 </body>
 </html>
