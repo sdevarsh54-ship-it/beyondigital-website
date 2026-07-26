@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Novare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="novare-thank-you.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">NOVARE</div>
+</header>
+
+<main class="wrapper">
+
+  <section class="hero">
+    <span class="eyebrow">Order Confirmed</span>
+    <h1>Thank You for Choosing Novare</h1>
+    <p class="lead">
+      We're truly grateful for your trust in us. As a small token of our appreciation,
+      here's an exclusive discount to enjoy on your next purchase.
+    </p>
+  </section>
+
+  <section class="coupon-card" aria-label="Discount coupon">
+    <div class="coupon-card__badge">Just for You</div>
+    <p class="coupon-card__discount"><span>20%</span> OFF</p>
+    <p class="coupon-card__subtext">Your next order with Novare</p>
+
+    <div class="coupon-code" id="couponCode">
+      <span class="coupon-code__label">Use code</span>
+      <span class="coupon-code__value">NOVARE20</span>
+      <button class="copy-btn" id="copyBtn" type="button" aria-label="Copy coupon code">Copy</button>
+    </div>
+
+    <p class="coupon-card__terms">Valid for 30 days · One use per customer · Cannot be combined with other offers</p>
+  </section>
+
+  <div class="cta-row">
+    <a href="#" class="btn-primary">Shop Now</a>
+  </div>
+
+  <section class="footnote">
+    <p>Questions about your order? <a href="mailto:support@novare.com">Reach out to our team</a> — we're always happy to help.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Novare. All rights reserved.</p>
+</footer>
+
+<script>
+  const copyBtn = document.getElementById('copyBtn');
+  const codeValue = document.querySelector('.coupon-code__value').textContent.trim();
+
+  copyBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(codeValue);
+      copyBtn.textContent = 'Copied!';
+      copyBtn.classList.add('copy-btn--copied');
+      setTimeout(() => {
+        copyBtn.textContent = 'Copy';
+        copyBtn.classList.remove('copy-btn--copied');
+      }, 2000);
+    } catch (err) {
+      copyBtn.textContent = 'Failed';
+    }
+  });
+</script>
+
+</body>
+</html>
